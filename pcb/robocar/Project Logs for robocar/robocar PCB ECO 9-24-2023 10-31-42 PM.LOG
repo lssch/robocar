@@ -1,0 +1,373 @@
+Removed Pin From Net: NetName=GND Pin=*-11
+Removed Pin From Net: NetName=5VDC Pin=*-13
+Removed Pin From Net: NetName=GND Pin=*-18
+Removed Pin From Net: NetName=ISP_BOOT Pin=*-20
+Removed Pin From Net: NetName=ISP_RST Pin=*-22
+Removed Pin From Net: NetName=ISP_TXD Pin=*-24
+Removed Pin From Net: NetName=ISP_RXD Pin=*-26
+Removed Pin From Net: NetName=GND Pin=C7-1
+Removed Pin From Net: NetName=User_Button Pin=C7-2
+Removed Pin From Net: NetName=GND Pin=C9-1
+Removed Pin From Net: NetName=Reset Pin=C9-2
+Removed Pin From Net: NetName=5VDC Pin=D6-A
+Removed Pin From Net: NetName=5VDC Pin=D7-A
+Removed Pin From Net: NetName=5VDC Pin=D8-A
+Removed Pin From Net: NetName=5VDC Pin=D9-A
+Removed Pin From Net: NetName=5VDC Pin=D10-A
+Removed Pin From Net: NetName=5VDC Pin=D11-A
+Removed Pin From Net: NetName=5VDC Pin=D12-A
+Removed Pin From Net: NetName=5VDC Pin=D13-A
+Removed Pin From Net: NetName=GND Pin=J6-1
+Removed Pin From Net: NetName=GND Pin=J7-1
+Removed Pin From Net: NetName=5VDC Pin=J10-1
+Removed Pin From Net: NetName=GND Pin=J10-2
+Removed Pin From Net: NetName=5VDC Pin=J11-1
+Removed Pin From Net: NetName=GND Pin=J11-2
+Removed Pin From Net: NetName=ISP_RXD Pin=J12-2
+Removed Pin From Net: NetName=ISP_TXD Pin=J12-3
+Removed Pin From Net: NetName=ISP_RST Pin=J12-4
+Removed Pin From Net: NetName=ISP_BOOT Pin=J12-5
+Removed Pin From Net: NetName=GND Pin=J12-6
+Removed Pin From Net: NetName=User_Button Pin=S2-3
+Removed Pin From Net: NetName=User_Button Pin=S2-4
+Removed Pin From Net: NetName=Reset Pin=S3-3
+Removed Pin From Net: NetName=Reset Pin=S3-4
+Removed Pin From Net: NetName=GND Pin=T1-E
+Removed Pin From Net: NetName=GND Pin=T2-E
+Removed Pin From Net: NetName=GND Pin=T3-E
+Removed Pin From Net: NetName=GND Pin=T4-E
+Removed Member From Class: ClassName=robocar Member=D6
+Removed Member From Class: ClassName=robocar Member=D7
+Removed Member From Class: ClassName=robocar Member=D8
+Removed Member From Class: ClassName=robocar Member=D9
+Removed Member From Class: ClassName=robocar Member=D10
+Removed Member From Class: ClassName=robocar Member=D11
+Removed Member From Class: ClassName=robocar Member=D12
+Removed Member From Class: ClassName=robocar Member=D13
+Removed Member From Class: ClassName=robocar Member=J8
+Removed Member From Class: ClassName=robocar Member=J10
+Removed Member From Class: ClassName=robocar Member=J11
+Removed Member From Class: ClassName=robocar Member=R5
+Removed Member From Class: ClassName=robocar Member=R6
+Removed Member From Class: ClassName=robocar Member=R7
+Removed Member From Class: ClassName=robocar Member=R8
+Removed Member From Class: ClassName=robocar Member=R9
+Removed Member From Class: ClassName=robocar Member=R10
+Removed Member From Class: ClassName=robocar Member=R11
+Removed Member From Class: ClassName=robocar Member=R12
+Removed Member From Class: ClassName=robocar Member=S2
+Removed Member From Class: ClassName=robocar Member=S3
+Removed Member From Class: ClassName=robocar Member=T1
+Removed Member From Class: ClassName=robocar Member=T2
+Removed Member From Class: ClassName=robocar Member=T3
+Removed Member From Class: ClassName=robocar Member=T4
+Change Component Footprint: Designator=J7 Old Footprint=Header1x2_254 New Footprint=Header1x3_254
+Change Component Footprint: Designator=J6 Old Footprint=Header1x2_254 New Footprint=Header1x4_254
+Change Component Footprint: Designator=J10 Old Footprint=Header1x4_254 New Footprint=Header1x2_254
+Change Component Footprint: Designator=J11 Old Footprint=Header1x10_254 New Footprint=TC2030
+Change Component Footprint: Designator=J12 Old Footprint=TC2030 New Footprint=Header1x2_254
+Change Component Comment : Designator=J7 Old Comment=2Pin_Male New Comment=3Pin_Male
+Change Component Comment : Designator=J6 Old Comment=2Pin_Male New Comment=4Pin_Male
+Change Component Comment : Designator=J10 Old Comment=4Pin_Male New Comment=2Pin_Male
+Change Component Comment : Designator=J11 Old Comment=10Pin_Male New Comment=TC2030
+Change Component Comment : Designator=J12 Old Comment=TC2030 New Comment=2Pin_Male
+Change component parameters: Designator = "J6" ("J6"); Footprint = "Header1x2_254"; UniqueID = "\QFJXXWGJ" ("\QFJXXWGJ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/katalog/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.16"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5317-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J7" ("J7"); Footprint = "Header1x2_254"; UniqueID = "\GMTSFLZH" ("\GMTSFLZH")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.we-online.com/katalog/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.12"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5316-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J10" ("J10"); Footprint = "Header1x4_254"; UniqueID = "\MJZYBPNZ\AHCCKPCJ" ("\MJZYBPNZ\AHCCKPCJ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J11" ("J11"); Footprint = "Header1x10_254"; UniqueID = "\MJZYBPNZ\ULOKIIKZ" ("\MJZYBPNZ\ULOKIIKZ")
+Change component parameters: Designator = "J12" ("J12"); Footprint = "TC2030"; UniqueID = "\MJZYBPNZ\FCTKJPXB" ("\MJZYBPNZ\FCTKJPXB")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C26(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C27(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C28(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C29(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C30(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C31(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_100nF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1012-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-20%/+80%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=IC5(STAMP-S3-DIP)
+Added Component: Designator=J9(Header1x10_254)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part ID"; Value = "ArduinoConnector_10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.86"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-2670-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=L2(0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/pbs/datasheet/742792040.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part ID"; Value = "L_Ferrit_Bead"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.22"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-1620-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "600Ohm @ 100MHz"; VariantName = "[No Variations]"
+Added Component: Designator=L3(0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/pbs/datasheet/742792040.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current"; Value = "2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part ID"; Value = "L_Ferrit_Bead"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.22"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-1620-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "600Ohm @ 100MHz"; VariantName = "[No Variations]"
+Added Component: Designator=P1(WS2812_THT_8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=P2(WS2812_THT_8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=P3(WS2812_THT_8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=P4(WS2812_THT_8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=P5(WS2812_THT_8)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Component: Designator=P6(WS2812B_SMD)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://cdn.sparkfun.com/datasheets/BreakoutBoards/WS2812B.pdf"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5VDC Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=5VDC Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C22-2
+Added Pin To Net: NetName=GND Pin=C23-2
+Added Pin To Net: NetName=5VDC Pin=C26-1
+Added Pin To Net: NetName=GND Pin=C26-2
+Added Pin To Net: NetName=5VDC Pin=C27-1
+Added Pin To Net: NetName=GND Pin=C27-2
+Added Pin To Net: NetName=5VDC Pin=C28-1
+Added Pin To Net: NetName=GND Pin=C28-2
+Added Pin To Net: NetName=GND Pin=C29-1
+Added Pin To Net: NetName=Reset Pin=C29-2
+Added Pin To Net: NetName=5VDC Pin=C30-1
+Added Pin To Net: NetName=GND Pin=C30-2
+Added Pin To Net: NetName=GND Pin=C31-1
+Added Pin To Net: NetName=User_Button Pin=C31-2
+Add Pin To Net: Unknown Pin: Pin IC4-1
+Add Pin To Net: Unknown Pin: Pin IC4-7
+Add Pin To Net: Unknown Pin: Pin IC4-10
+Add Pin To Net: Unknown Pin: Pin IC4-11
+Add Pin To Net: Unknown Pin: Pin IC4-13
+Add Pin To Net: Unknown Pin: Pin IC4-16
+Add Pin To Net: Unknown Pin: Pin IC4-17
+Add Pin To Net: Unknown Pin: Pin IC4-18
+Add Pin To Net: Unknown Pin: Pin IC4-19
+Add Pin To Net: Unknown Pin: Pin IC4-30
+Add Pin To Net: Unknown Pin: Pin IC4-31
+Add Pin To Net: Unknown Pin: Pin IC4-32
+Add Pin To Net: Unknown Pin: Pin IC4-33
+Add Pin To Net: Unknown Pin: Pin IC4-34
+Add Pin To Net: Unknown Pin: Pin IC4-42
+Add Pin To Net: Unknown Pin: Pin IC4-43
+Add Pin To Net: Unknown Pin: Pin IC4-45
+Add Pin To Net: Unknown Pin: Pin IC4-46
+Add Pin To Net: Unknown Pin: Pin IC4-47
+Add Pin To Net: Unknown Pin: Pin IC4-48
+Add Pin To Net: Unknown Pin: Pin IC4-49
+Add Pin To Net: Unknown Pin: Pin IC4-60
+Add Pin To Net: Unknown Pin: Pin IC4-61
+Add Pin To Net: Unknown Pin: Pin IC4-62
+Add Pin To Net: Unknown Pin: Pin IC4-63
+Add Pin To Net: Unknown Pin: Pin IC4-64
+Added Pin To Net: NetName=GND Pin=IC5-11
+Added Pin To Net: NetName=5VDC Pin=IC5-13
+Added Pin To Net: NetName=GND Pin=IC5-18
+Added Pin To Net: NetName=ISP_BOOT Pin=IC5-20
+Added Pin To Net: NetName=ISP_RST Pin=IC5-22
+Added Pin To Net: NetName=ISP_TXD Pin=IC5-24
+Added Pin To Net: NetName=ISP_RXD Pin=IC5-26
+Added Pin To Net: NetName=5VDC Pin=J6-1
+Added Pin To Net: NetName=GND Pin=J6-2
+Added Pin To Net: NetName=NetIC4_42 Pin=J6-3
+Added Pin To Net: NetName=NetIC4_43 Pin=J6-4
+Added Pin To Net: NetName=5VDC Pin=J7-1
+Added Pin To Net: NetName=GND Pin=J7-3
+Added Pin To Net: NetName=GND Pin=J9-1
+Added Pin To Net: NetName=5VDC Pin=J9-2
+Added Pin To Net: NetName=NetIC4_33 Pin=J9-4
+Added Pin To Net: NetName=NetIC4_10 Pin=J9-5
+Added Pin To Net: NetName=NetIC4_11 Pin=J9-6
+Added Pin To Net: NetName=NetIC4_34 Pin=J9-7
+Added Pin To Net: NetName=ISP_BOOT Pin=J10-2
+Added Pin To Net: NetName=ISP_RXD Pin=J11-2
+Added Pin To Net: NetName=ISP_TXD Pin=J11-3
+Added Pin To Net: NetName=ISP_RST Pin=J11-4
+Added Pin To Net: NetName=ISP_BOOT Pin=J11-5
+Added Pin To Net: NetName=GND Pin=J11-6
+Added Pin To Net: NetName=GND Pin=J12-1
+Added Pin To Net: NetName=3.3VDC Pin=J13-3
+Added Pin To Net: NetName=NetC22_1 Pin=L2-1
+Added Pin To Net: NetName=3.3VDC Pin=L2-2
+Added Pin To Net: NetName=GND Pin=L3-2
+Added Pin To Net: NetName=5VDC Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=5VDC Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=5VDC Pin=P3-1
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Pin To Net: NetName=5VDC Pin=P4-1
+Added Pin To Net: NetName=GND Pin=P4-3
+Added Pin To Net: NetName=5VDC Pin=P5-1
+Added Pin To Net: NetName=GND Pin=P5-3
+Added Pin To Net: NetName=5VDC Pin=P6-1
+Added Pin To Net: NetName=GND Pin=P6-3
+Added Pin To Net: NetName=Reset Pin=S2-3
+Added Pin To Net: NetName=Reset Pin=S2-4
+Added Pin To Net: NetName=User_Button Pin=S3-3
+Added Pin To Net: NetName=User_Button Pin=S3-4
+Change Net Name : Old Net Name=Servo1_PWM New Net Name=NetJ1_1
+Change Net Name : Old Net Name=Servo2_PWM New Net Name=NetJ3_1
+Added Pin To Net: NetName=ESP32_ERROR Pin=IC5-2
+Added Net: Name=ESP32_ERROR
+Added Pin To Net: NetName=ESP32_OK Pin=IC5-1
+Added Net: Name=ESP32_OK
+Added Pin To Net: NetName=ESP32_RESET Pin=J10-1
+Added Net: Name=ESP32_RESET
+Added Pin To Net: NetName=ESP32_SPI_CLK Pin=IC5-4
+Added Net: Name=ESP32_SPI_CLK
+Added Pin To Net: NetName=ESP32_SPI_CS Pin=IC5-3
+Added Net: Name=ESP32_SPI_CS
+Added Pin To Net: NetName=ESP32_SPI_MISO Pin=IC5-5
+Added Net: Name=ESP32_SPI_MISO
+Added Pin To Net: NetName=ESP32_SPI_MOSI Pin=IC5-6
+Added Net: Name=ESP32_SPI_MOSI
+Added Pin To Net: NetName=ISP_3V3 Pin=IC5-28
+Added Pin To Net: NetName=ISP_3V3 Pin=J11-1
+Added Net: Name=ISP_3V3
+Added Pin To Net: NetName=LED_PIXEL Pin=P1-4
+Added Pin To Net: NetName=LED_PIXEL Pin=P6-2
+Added Net: Name=LED_PIXEL
+Added Net: Name=NetIC4_2
+Added Pin To Net: NetName=NetIC4_12 Pin=L3-1
+Added Net: Name=NetIC4_12
+Added Pin To Net: NetName=NetIC4_26 Pin=P6-4
+Added Net: Name=NetIC4_26
+Added Pin To Net: NetName=NetIC4_41 Pin=IC5-7
+Added Net: Name=NetIC4_41
+Added Pin To Net: NetName=NetIC4_44 Pin=IC5-8
+Added Net: Name=NetIC4_44
+Added Pin To Net: NetName=NetIC4_50 Pin=IC5-9
+Added Net: Name=NetIC4_50
+Added Pin To Net: NetName=NetJ7_2 Pin=J7-2
+Added Pin To Net: NetName=NetJ7_2 Pin=P5-2
+Added Net: Name=NetJ7_2
+Added Pin To Net: NetName=NetJ9_8 Pin=J9-8
+Added Net: Name=NetJ9_8
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=P2-4
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=NetP2_2 Pin=P3-4
+Added Net: Name=NetP2_2
+Added Pin To Net: NetName=NetP3_2 Pin=P3-2
+Added Pin To Net: NetName=NetP3_2 Pin=P4-4
+Added Net: Name=NetP3_2
+Added Pin To Net: NetName=NetP4_2 Pin=P4-2
+Added Pin To Net: NetName=NetP4_2 Pin=P5-4
+Added Net: Name=NetP4_2
+Added Pin To Net: NetName=USR_CONFIG1 Pin=J8-2
+Added Net: Name=USR_CONFIG1
+Added Pin To Net: NetName=USR_CONFIG2 Pin=J12-2
+Added Net: Name=USR_CONFIG2
+Change Class Name : Old Net Name=U_STM32 New Net Name=U_Microcrontroller
+Added Member To Class: ClassName=robocar Member=Component C26 C 100nF 0603
+Added Member To Class: ClassName=robocar Member=Component C27 C 100nF 0603
+Added Member To Class: ClassName=robocar Member=Component C28 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C29 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C30 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C31 C 100nF 0603
+Add Class Member: Failed to add class member : Component IC4 STM32F446RE
+Added Member To Class: ClassName=U_Microcrontroller Member=Component IC5 StampS3
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J8 2Pin_Male
+Added Member To Class: ClassName=robocar Member=Component J9 10Pin_Male
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J10 2Pin_Male
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J11 TC2030
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J12 2Pin_Male
+Added Member To Class: ClassName=U_Microcrontroller Member=Component L2 L Ferrit Bead
+Added Member To Class: ClassName=U_Microcrontroller Member=Component L3 L Ferrit Bead
+Added Member To Class: ClassName=robocar Member=Component P1 WS2812B
+Added Member To Class: ClassName=robocar Member=Component P2 WS2812B
+Added Member To Class: ClassName=robocar Member=Component P3 WS2812B
+Added Member To Class: ClassName=robocar Member=Component P4 WS2812B
+Added Member To Class: ClassName=robocar Member=Component P5 WS2812B
+Added Member To Class: ClassName=U_Microcrontroller Member=Component P6 WS2812B
+Added Member To Class: ClassName=U_Microcrontroller Member=Component S2 TactileButton
+Added Member To Class: ClassName=U_Microcrontroller Member=Component S3 TactileButton

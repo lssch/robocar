@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=ESP32_OK Pin=IC6-1
+Removed Pin From Net: NetName=ESP32_ERROR Pin=IC6-2
+Removed Pin From Net: NetName=ESP32_RES1 Pin=IC6-3
+Removed Pin From Net: NetName=ESP32_RES2 Pin=IC6-4
+Removed Pin From Net: NetName=ESP32_SPI_CS Pin=IC6-5
+Removed Pin From Net: NetName=ESP32_SPI_CLK Pin=IC6-6
+Removed Pin From Net: NetName=ESP32_SPI_MISO Pin=IC6-7
+Removed Pin From Net: NetName=ESP32_SPI_MOSI Pin=IC6-8
+Removed Pin From Net: NetName=ESP32_RES3 Pin=IC6-9
+Removed Pin From Net: NetName=GND Pin=IC6-11
+Removed Pin From Net: NetName=5VDC Pin=IC6-13
+Removed Pin From Net: NetName=GND Pin=IC6-18
+Removed Pin From Net: NetName=ISP_BOOT Pin=IC6-20
+Removed Pin From Net: NetName=ISP_RST Pin=IC6-22
+Removed Pin From Net: NetName=ISP_TXD Pin=IC6-24
+Removed Pin From Net: NetName=ISP_RXD Pin=IC6-26
+Removed Pin From Net: NetName=ISP_3V3 Pin=IC6-28
+Removed Member From Class: ClassName=U_Microcrontroller Member=IC6
+Change component parameters: Designator = "IC3" ("IC3"); Footprint = "SOP65P760X160-24N"; UniqueID = "\WYKQUYJD" ("\WYKQUYJD")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Arrow Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "TB6612FNG,C,8,EL"; VariantName = "[No Variations]"
+Added Component: Designator=*(Stamp-S3-SMD)
+Added Pin To Net: NetName=ESP32_OK Pin=*-1
+Added Pin To Net: NetName=ESP32_ERROR Pin=*-2
+Added Pin To Net: NetName=ESP32_RES1 Pin=*-3
+Added Pin To Net: NetName=ESP32_RES2 Pin=*-4
+Added Pin To Net: NetName=ESP32_SPI_CS Pin=*-5
+Added Pin To Net: NetName=ESP32_SPI_CLK Pin=*-6
+Added Pin To Net: NetName=ESP32_SPI_MISO Pin=*-7
+Added Pin To Net: NetName=ESP32_SPI_MOSI Pin=*-8
+Added Pin To Net: NetName=ESP32_RES3 Pin=*-9
+Added Pin To Net: NetName=GND Pin=*-11
+Added Pin To Net: NetName=5VDC Pin=*-13
+Added Pin To Net: NetName=GND Pin=*-18
+Added Pin To Net: NetName=ISP_BOOT Pin=*-20
+Added Pin To Net: NetName=ISP_RST Pin=*-22
+Added Pin To Net: NetName=ISP_TXD Pin=*-24
+Added Pin To Net: NetName=ISP_RXD Pin=*-26
+Added Pin To Net: NetName=ISP_3V3 Pin=*-28
+Added Pin To Net: NetName=Net*_10 Pin=*-10
+Added Pin To Net: NetName=Net*_10 Pin=R10-2
+Added Net: Name=Net*_10
+Added Pin To Net: NetName=Net*_19 Pin=*-19
+Added Pin To Net: NetName=Net*_19 Pin=MP4-1
+Added Net: Name=Net*_19
+Added Pin To Net: NetName=Net*_21 Pin=*-21
+Added Pin To Net: NetName=Net*_21 Pin=MP3-1
+Added Net: Name=Net*_21
+Added Pin To Net: NetName=Net*_23 Pin=*-23
+Added Pin To Net: NetName=Net*_23 Pin=MP2-1
+Added Net: Name=Net*_23
+Added Pin To Net: NetName=Net*_25 Pin=*-25
+Added Pin To Net: NetName=Net*_25 Pin=MP1-1
+Added Net: Name=Net*_25
+Added Member To Class: ClassName=U_Microcrontroller Member=Component * StampS3

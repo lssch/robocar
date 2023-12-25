@@ -1,0 +1,57 @@
+Protel Design System Design Rule Check
+PCB File : W:\01_FHGR\01_Pflichtmodule\PM_Mobiles_Roboterprojekt\PM_Mobiles_Robotikprojekt_I\robocar\PCB\robocar\pcb.PcbDoc
+Date     : 10/30/2023
+Time     : 3:42:36 PM
+
+Processing Rule : Clearance Constraint (Gap=6mil) (IsPad AND HasFootprint('LM3150') OR IsPad AND HasFootprint('TSSOP14') OR IsPad AND HasFootprint('LQFP48') OR IsPad AND HasFootprint('SOT363') OR IsPad AND HasFootprint('SOT563') OR IsPad AND  HasFootprint('STM32F446RET6') OR IsPad AND  HasFootprint('MSOP-8') OR IsPad AND HasFootprint('MPU_6050') OR IsPad AND HasFootprint('SOP65P760X160-24N') OR IsPad AND    HasFootprint('MEC6-130-02-L-D-RA1')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=20mil) ((InPoly)),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=40mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=5.906mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=11.811mil) (Max=334.646mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1500mil) (Prefered=1000mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Waived Violations : 0
+Time Elapsed        : 00:00:01

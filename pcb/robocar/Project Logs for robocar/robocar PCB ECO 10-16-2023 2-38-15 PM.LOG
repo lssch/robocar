@@ -1,0 +1,121 @@
+Removed Pin From Net: NetName=3.3VDC Pin=C26-1
+Removed Pin From Net: NetName=GND Pin=C26-2
+Removed Pin From Net: NetName=3.3VDC Pin=C27-1
+Removed Pin From Net: NetName=GND Pin=C27-2
+Removed Member From Class: ClassName=robocar Member=C26
+Removed Member From Class: ClassName=robocar Member=C27
+Change Component Footprint: Designator=J14 Old Footprint=Header1x8_254 New Footprint=61300821121
+Change Component Footprint: Designator=C25 Old Footprint=PCAP_8x10-ELEC00 New Footprint=UCD1H221MNL1GS
+Change Component Comment : Designator=J14 Old Comment=8Pin_Male New Comment=Pinheader_2x4
+Change Component Comment : Designator=C25 Old Comment=C 100uF ALUM New Comment=
+Change Component Designator: OldDesignator=C28 NewDesignator=C26
+Change Component Designator: OldDesignator=C29 NewDesignator=C27
+Change Component Designator: OldDesignator=C30 NewDesignator=C28
+Change Component Designator: OldDesignator=C31 NewDesignator=C29
+Change Component Designator: OldDesignator=C32 NewDesignator=C30
+Change Component Designator: OldDesignator=C33 NewDesignator=C31
+Change Component Designator: OldDesignator=C34 NewDesignator=C32
+Change Component Designator: OldDesignator=C35 NewDesignator=C33
+Change Component Designator: OldDesignator=C36 NewDesignator=C34
+Change Component Designator: OldDesignator=C37 NewDesignator=C35
+Change Component Designator: OldDesignator=C38 NewDesignator=C36
+Change Component Designator: OldDesignator=C39 NewDesignator=C37
+Change Component Designator: OldDesignator=C40 NewDesignator=C38
+Change Component Designator: OldDesignator=MP5 NewDesignator=MP1
+Change Component Designator: OldDesignator=MP6 NewDesignator=MP2
+Change Component Designator: OldDesignator=MP7 NewDesignator=MP3
+Change Component Designator: OldDesignator=MP8 NewDesignator=MP4
+Change component parameters: Designator = "C25" ("C25"); Footprint = "PCAP_8x10-ELEC00"; UniqueID = "\XYQXCKTY" ("\XYQXCKTY")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "493-6390-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J14" ("J14"); Footprint = "Header1x8_254"; UniqueID = "\MJZYBPNZ\MUXGUTCJ" ("\MJZYBPNZ\MUXGUTCJ")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Rs"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "8281522P"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found SOP65P760X160-24N
+Add Pin To Net: Unknown Pin: Pin IC3-1
+Add Pin To Net: Unknown Pin: Pin IC3-2
+Add Pin To Net: Unknown Pin: Pin IC3-3
+Add Pin To Net: Unknown Pin: Pin IC3-4
+Add Pin To Net: Unknown Pin: Pin IC3-5
+Add Pin To Net: Unknown Pin: Pin IC3-6
+Add Pin To Net: Unknown Pin: Pin IC3-7
+Add Pin To Net: Unknown Pin: Pin IC3-8
+Add Pin To Net: Unknown Pin: Pin IC3-9
+Add Pin To Net: Unknown Pin: Pin IC3-10
+Add Pin To Net: Unknown Pin: Pin IC3-11
+Add Pin To Net: Unknown Pin: Pin IC3-12
+Add Pin To Net: Unknown Pin: Pin IC3-13
+Add Pin To Net: Unknown Pin: Pin IC3-14
+Add Pin To Net: Unknown Pin: Pin IC3-15
+Add Pin To Net: Unknown Pin: Pin IC3-16
+Add Pin To Net: Unknown Pin: Pin IC3-17
+Add Pin To Net: Unknown Pin: Pin IC3-18
+Add Pin To Net: Unknown Pin: Pin IC3-19
+Add Pin To Net: Unknown Pin: Pin IC3-20
+Add Pin To Net: Unknown Pin: Pin IC3-21
+Add Pin To Net: Unknown Pin: Pin IC3-22
+Add Pin To Net: Unknown Pin: Pin IC3-23
+Add Pin To Net: Unknown Pin: Pin IC3-24
+Add Pin To Net: Unknown Pin: Pin IC5-1
+Add Pin To Net: Unknown Pin: Pin IC5-2
+Add Pin To Net: Unknown Pin: Pin IC5-7
+Add Pin To Net: Unknown Pin: Pin IC5-8
+Add Pin To Net: Unknown Pin: Pin IC5-9
+Add Pin To Net: Unknown Pin: Pin IC5-10
+Add Pin To Net: Unknown Pin: Pin IC5-11
+Add Pin To Net: Unknown Pin: Pin IC5-12
+Add Pin To Net: Unknown Pin: Pin IC5-13
+Add Pin To Net: Unknown Pin: Pin IC5-14
+Add Pin To Net: Unknown Pin: Pin IC5-15
+Add Pin To Net: Unknown Pin: Pin IC5-16
+Add Pin To Net: Unknown Pin: Pin IC5-17
+Add Pin To Net: Unknown Pin: Pin IC5-18
+Add Pin To Net: Unknown Pin: Pin IC5-19
+Add Pin To Net: Unknown Pin: Pin IC5-20
+Add Pin To Net: Unknown Pin: Pin IC5-21
+Add Pin To Net: Unknown Pin: Pin IC5-22
+Add Pin To Net: Unknown Pin: Pin IC5-23
+Add Pin To Net: Unknown Pin: Pin IC5-24
+Add Pin To Net: Unknown Pin: Pin IC5-25
+Add Pin To Net: Unknown Pin: Pin IC5-26
+Add Pin To Net: Unknown Pin: Pin IC5-27
+Add Pin To Net: Unknown Pin: Pin IC5-28
+Add Pin To Net: Unknown Pin: Pin IC5-29
+Add Pin To Net: Unknown Pin: Pin IC5-31
+Add Pin To Net: Unknown Pin: Pin IC5-32
+Add Pin To Net: Unknown Pin: Pin IC5-33
+Add Pin To Net: Unknown Pin: Pin IC5-34
+Add Pin To Net: Unknown Pin: Pin IC5-35
+Add Pin To Net: Unknown Pin: Pin IC5-36
+Add Pin To Net: Unknown Pin: Pin IC5-37
+Add Pin To Net: Unknown Pin: Pin IC5-38
+Add Pin To Net: Unknown Pin: Pin IC5-39
+Add Pin To Net: Unknown Pin: Pin IC5-40
+Add Pin To Net: Unknown Pin: Pin IC5-41
+Add Pin To Net: Unknown Pin: Pin IC5-42
+Add Pin To Net: Unknown Pin: Pin IC5-43
+Add Pin To Net: Unknown Pin: Pin IC5-44
+Add Pin To Net: Unknown Pin: Pin IC5-46
+Add Pin To Net: Unknown Pin: Pin IC5-47
+Add Pin To Net: Unknown Pin: Pin IC5-48
+Add Pin To Net: Unknown Pin: Pin IC5-49
+Add Pin To Net: Unknown Pin: Pin IC5-50
+Add Pin To Net: Unknown Pin: Pin IC5-51
+Add Pin To Net: Unknown Pin: Pin IC5-52
+Add Pin To Net: Unknown Pin: Pin IC5-53
+Add Pin To Net: Unknown Pin: Pin IC5-55
+Add Pin To Net: Unknown Pin: Pin IC5-56
+Add Pin To Net: Unknown Pin: Pin IC5-57
+Add Pin To Net: Unknown Pin: Pin IC5-58
+Add Pin To Net: Unknown Pin: Pin IC5-59
+Add Pin To Net: Unknown Pin: Pin IC5-60
+Add Pin To Net: Unknown Pin: Pin IC5-61
+Add Pin To Net: Unknown Pin: Pin IC5-62
+Add Pin To Net: Unknown Pin: Pin IC5-63
+Add Pin To Net: Unknown Pin: Pin IC5-64
+Change Net Name : Old Net Name=NetC33_1 New Net Name=NetC31_1
+Added Pin To Net: NetName=NetC36_1 Pin=C36-1
+Added Net: Name=NetC36_1
+Add Class Member: Failed to add class member : Component IC3 TB6612FNG
+Add Class Member: Failed to add class member : Component IC5 STM32F446RE

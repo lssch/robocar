@@ -1,0 +1,198 @@
+Removed Pin From Net: NetName=5VDC Pin=C12-1
+Removed Pin From Net: NetName=5VDC Pin=C13-1
+Removed Pin From Net: NetName=12VDC Pin=C14-1
+Removed Pin From Net: NetName=12VDC Pin=C15-1
+Removed Pin From Net: NetName=ESP32_SPI_CS Pin=MP1-1
+Removed Pin From Net: NetName=ESP32_SPI_CLK Pin=MP2-1
+Removed Pin From Net: NetName=ESP32_SPI_MISO Pin=MP3-1
+Removed Pin From Net: NetName=ESP32_SPI_MOSI Pin=MP4-1
+Removed Pin From Net: NetName=NetP5_4 Pin=R10-1
+Removed Pin From Net: NetName=NetP6_4 Pin=R11-1
+Removed Pin From Net: NetName=5VDC Pin=R13-2
+Removed Pin From Net: NetName=5VDC Pin=R14-2
+Removed Member From Class: ClassName=U_Microcrontroller Member=MP1
+Removed Member From Class: ClassName=U_Microcrontroller Member=MP2
+Removed Member From Class: ClassName=U_Microcrontroller Member=MP3
+Removed Member From Class: ClassName=U_Microcrontroller Member=MP4
+Removed Member From Class: ClassName=U_Microcrontroller Member=R10
+Removed Member From Class: ClassName=U_Microcrontroller Member=R11
+Removed Member From Class: ClassName=robocar Member=R13
+Removed Member From Class: ClassName=robocar Member=R14
+Change Component Designator: OldDesignator=C24 NewDesignator=C25
+Change Component Designator: OldDesignator=C25 NewDesignator=C26
+Change Component Designator: OldDesignator=C26 NewDesignator=C27
+Change Component Designator: OldDesignator=C27 NewDesignator=C28
+Change Component Designator: OldDesignator=C28 NewDesignator=C29
+Change Component Designator: OldDesignator=C29 NewDesignator=C30
+Change Component Designator: OldDesignator=C30 NewDesignator=C31
+Change Component Designator: OldDesignator=C31 NewDesignator=C32
+Change Component Designator: OldDesignator=C32 NewDesignator=C33
+Change Component Designator: OldDesignator=C33 NewDesignator=C34
+Change Component Designator: OldDesignator=C34 NewDesignator=C35
+Change Component Designator: OldDesignator=C35 NewDesignator=C36
+Change Component Designator: OldDesignator=C36 NewDesignator=C37
+Change Component Designator: OldDesignator=C37 NewDesignator=C38
+Change Component Designator: OldDesignator=C38 NewDesignator=C39
+Change Component Designator: OldDesignator=C39 NewDesignator=C40
+Change Component Designator: OldDesignator=J9 NewDesignator=J10
+Change Component Designator: OldDesignator=J10 NewDesignator=J11
+Change Component Designator: OldDesignator=J11 NewDesignator=J12
+Change Component Designator: OldDesignator=J12 NewDesignator=J13
+Change Component Designator: OldDesignator=J13 NewDesignator=J14
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R8
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R8 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R11
+Change Component Designator: OldDesignator=R13 NewDesignator=R5
+Change Component Designator: OldDesignator=R14 NewDesignator=R6
+Change component parameters: Designator = "R8" ("R10"); Footprint = "0805"; UniqueID = "\MJZYBPNZ\AXLKBQYM" ("\MJZYBPNZ\AXLKBQYM")
+Change component parameters (AddParameter): Name = "Part ID"; Value = "R_220R_0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Dissipation"; Value = "125mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 10pcs (CHF)"; Value = "0.052"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "A129741CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R9" ("R11"); Footprint = "0805"; UniqueID = "\MJZYBPNZ\HERFBHRB" ("\MJZYBPNZ\HERFBHRB")
+Change component parameters (AddParameter): Name = "Part ID"; Value = "R_220R_0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Dissipation"; Value = "125mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 10pcs (CHF)"; Value = "0.052"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "A129741CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Added Component: Designator=C24(0603)
+Add component (AddParameter): Name = "Part ID"; Value = "C_10000pF_0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1276-1009-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TempKoeff"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found SOP65P760X160-24N
+Added Component: Designator=J9(PicoBlade_5_Vertical)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "538-53047-0510"; VariantName = "[No Variations]"
+Added Component: Designator=R13(0805)
+Add component (AddParameter): Name = "Part ID"; Value = "R_10k_0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "125mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 10pcs (CHF)"; Value = "0.021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "311-10.0KCRCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=12VDC Pin=C12-1
+Added Pin To Net: NetName=12VDC Pin=C13-1
+Added Pin To Net: NetName=5VDC Pin=C14-1
+Added Pin To Net: NetName=5VDC Pin=C15-1
+Added Pin To Net: NetName=3.3VDC Pin=C24-1
+Added Pin To Net: NetName=GND Pin=C24-2
+Add Pin To Net: Unknown Pin: Pin IC3-1
+Add Pin To Net: Unknown Pin: Pin IC3-2
+Add Pin To Net: Unknown Pin: Pin IC3-3
+Add Pin To Net: Unknown Pin: Pin IC3-4
+Add Pin To Net: Unknown Pin: Pin IC3-5
+Add Pin To Net: Unknown Pin: Pin IC3-6
+Add Pin To Net: Unknown Pin: Pin IC3-7
+Add Pin To Net: Unknown Pin: Pin IC3-8
+Add Pin To Net: Unknown Pin: Pin IC3-9
+Add Pin To Net: Unknown Pin: Pin IC3-10
+Add Pin To Net: Unknown Pin: Pin IC3-11
+Add Pin To Net: Unknown Pin: Pin IC3-12
+Add Pin To Net: Unknown Pin: Pin IC3-13
+Add Pin To Net: Unknown Pin: Pin IC3-14
+Add Pin To Net: Unknown Pin: Pin IC3-15
+Add Pin To Net: Unknown Pin: Pin IC3-16
+Add Pin To Net: Unknown Pin: Pin IC3-17
+Add Pin To Net: Unknown Pin: Pin IC3-18
+Add Pin To Net: Unknown Pin: Pin IC3-19
+Add Pin To Net: Unknown Pin: Pin IC3-20
+Add Pin To Net: Unknown Pin: Pin IC3-21
+Add Pin To Net: Unknown Pin: Pin IC3-22
+Add Pin To Net: Unknown Pin: Pin IC3-23
+Add Pin To Net: Unknown Pin: Pin IC3-24
+Add Pin To Net: Unknown Pin: Pin IC5-1
+Add Pin To Net: Unknown Pin: Pin IC5-2
+Add Pin To Net: Unknown Pin: Pin IC5-7
+Add Pin To Net: Unknown Pin: Pin IC5-8
+Add Pin To Net: Unknown Pin: Pin IC5-9
+Add Pin To Net: Unknown Pin: Pin IC5-10
+Add Pin To Net: Unknown Pin: Pin IC5-11
+Add Pin To Net: Unknown Pin: Pin IC5-12
+Add Pin To Net: Unknown Pin: Pin IC5-13
+Add Pin To Net: Unknown Pin: Pin IC5-14
+Add Pin To Net: Unknown Pin: Pin IC5-15
+Add Pin To Net: Unknown Pin: Pin IC5-16
+Add Pin To Net: Unknown Pin: Pin IC5-17
+Add Pin To Net: Unknown Pin: Pin IC5-18
+Add Pin To Net: Unknown Pin: Pin IC5-19
+Add Pin To Net: Unknown Pin: Pin IC5-20
+Add Pin To Net: Unknown Pin: Pin IC5-21
+Add Pin To Net: Unknown Pin: Pin IC5-22
+Add Pin To Net: Unknown Pin: Pin IC5-23
+Add Pin To Net: Unknown Pin: Pin IC5-24
+Add Pin To Net: Unknown Pin: Pin IC5-25
+Add Pin To Net: Unknown Pin: Pin IC5-26
+Add Pin To Net: Unknown Pin: Pin IC5-27
+Add Pin To Net: Unknown Pin: Pin IC5-28
+Add Pin To Net: Unknown Pin: Pin IC5-29
+Add Pin To Net: Unknown Pin: Pin IC5-31
+Add Pin To Net: Unknown Pin: Pin IC5-32
+Add Pin To Net: Unknown Pin: Pin IC5-33
+Add Pin To Net: Unknown Pin: Pin IC5-34
+Add Pin To Net: Unknown Pin: Pin IC5-35
+Add Pin To Net: Unknown Pin: Pin IC5-36
+Add Pin To Net: Unknown Pin: Pin IC5-37
+Add Pin To Net: Unknown Pin: Pin IC5-38
+Add Pin To Net: Unknown Pin: Pin IC5-39
+Add Pin To Net: Unknown Pin: Pin IC5-40
+Add Pin To Net: Unknown Pin: Pin IC5-41
+Add Pin To Net: Unknown Pin: Pin IC5-42
+Add Pin To Net: Unknown Pin: Pin IC5-43
+Add Pin To Net: Unknown Pin: Pin IC5-44
+Add Pin To Net: Unknown Pin: Pin IC5-46
+Add Pin To Net: Unknown Pin: Pin IC5-47
+Add Pin To Net: Unknown Pin: Pin IC5-48
+Add Pin To Net: Unknown Pin: Pin IC5-49
+Add Pin To Net: Unknown Pin: Pin IC5-50
+Add Pin To Net: Unknown Pin: Pin IC5-51
+Add Pin To Net: Unknown Pin: Pin IC5-52
+Add Pin To Net: Unknown Pin: Pin IC5-53
+Add Pin To Net: Unknown Pin: Pin IC5-55
+Add Pin To Net: Unknown Pin: Pin IC5-56
+Add Pin To Net: Unknown Pin: Pin IC5-57
+Add Pin To Net: Unknown Pin: Pin IC5-58
+Add Pin To Net: Unknown Pin: Pin IC5-59
+Add Pin To Net: Unknown Pin: Pin IC5-60
+Add Pin To Net: Unknown Pin: Pin IC5-61
+Add Pin To Net: Unknown Pin: Pin IC5-62
+Add Pin To Net: Unknown Pin: Pin IC5-63
+Add Pin To Net: Unknown Pin: Pin IC5-64
+Added Pin To Net: NetName=5VDC Pin=J9-1
+Added Pin To Net: NetName=3.3VDC Pin=J9-2
+Added Pin To Net: NetName=GND Pin=J9-3
+Added Pin To Net: NetName=NetIC4_23 Pin=J9-4
+Added Pin To Net: NetName=NetIC4_24 Pin=J9-5
+Added Pin To Net: NetName=3.3VDC Pin=R5-2
+Added Pin To Net: NetName=3.3VDC Pin=R6-2
+Added Pin To Net: NetName=NetP5_4 Pin=R10-1
+Added Pin To Net: NetName=NetP6_4 Pin=R11-1
+Added Pin To Net: NetName=USR_BUTTON Pin=R13-1
+Added Pin To Net: NetName=3.3VDC Pin=R13-2
+Change Net Name : Old Net Name=NetC32_1 New Net Name=NetC33_1
+Change Net Name : Old Net Name=RESET New Net Name=STM32_DBG_NRST
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=Lime
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=RGB(255, 153, 0)
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=Red
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=Blue
+Added Pin To Net: NetName=NetC38_1 Pin=C38-1
+Added Net: Name=NetC38_1
+Added Member To Class: ClassName=robocar Member=Component C27 C 100uF ALUM
+Add Class Member: Failed to add class member : Component IC3 TB6612FNG
+Add Class Member: Failed to add class member : Component IC5 STM32F446RE
+Added Member To Class: ClassName=robocar Member=Component J10 PicoBlade_5_Angled
+Added Member To Class: ClassName=robocar Member=Component R7 R 1K 0805
+Added Member To Class: ClassName=robocar Member=Component R8 R 1K 0805
+Added Member To Class: ClassName=U_Microcrontroller Member=Component R13 R 10K 0805

@@ -1,0 +1,122 @@
+Add Component: Footprint Not Found SOP65P760X160-24N
+Added Component: Designator=IC?(STM32F446RET6)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "511-STM32F446RET6"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin IC3-1
+Add Pin To Net: Unknown Pin: Pin IC3-2
+Add Pin To Net: Unknown Pin: Pin IC3-3
+Add Pin To Net: Unknown Pin: Pin IC3-4
+Add Pin To Net: Unknown Pin: Pin IC3-5
+Add Pin To Net: Unknown Pin: Pin IC3-6
+Add Pin To Net: Unknown Pin: Pin IC3-7
+Add Pin To Net: Unknown Pin: Pin IC3-8
+Add Pin To Net: Unknown Pin: Pin IC3-9
+Add Pin To Net: Unknown Pin: Pin IC3-10
+Add Pin To Net: Unknown Pin: Pin IC3-11
+Add Pin To Net: Unknown Pin: Pin IC3-12
+Add Pin To Net: Unknown Pin: Pin IC3-13
+Add Pin To Net: Unknown Pin: Pin IC3-14
+Add Pin To Net: Unknown Pin: Pin IC3-15
+Add Pin To Net: Unknown Pin: Pin IC3-16
+Add Pin To Net: Unknown Pin: Pin IC3-17
+Add Pin To Net: Unknown Pin: Pin IC3-18
+Add Pin To Net: Unknown Pin: Pin IC3-19
+Add Pin To Net: Unknown Pin: Pin IC3-20
+Add Pin To Net: Unknown Pin: Pin IC3-21
+Add Pin To Net: Unknown Pin: Pin IC3-22
+Add Pin To Net: Unknown Pin: Pin IC3-23
+Add Pin To Net: Unknown Pin: Pin IC3-24
+Added Pin To Net: NetName=3.3VDC Pin=IC?-1
+Added Pin To Net: NetName=NetIC4_12 Pin=IC?-2
+Added Pin To Net: NetName=STM32_DBG_NRST Pin=IC?-7
+Added Pin To Net: NetName=NetIC3_21 Pin=IC?-11
+Added Pin To Net: NetName=NetC31_1 Pin=IC?-13
+Added Pin To Net: NetName=ESP32_OK Pin=IC?-14
+Added Pin To Net: NetName=ESP32_ERROR Pin=IC?-15
+Added Pin To Net: NetName=ESP32_RES1 Pin=IC?-16
+Added Pin To Net: NetName=ESP32_RES2 Pin=IC?-17
+Added Pin To Net: NetName=GND Pin=IC?-18
+Added Pin To Net: NetName=3.3VDC Pin=IC?-19
+Added Pin To Net: NetName=ESP32_SPI_CS Pin=IC?-20
+Added Pin To Net: NetName=ESP32_SPI_CLK Pin=IC?-21
+Added Pin To Net: NetName=ESP32_SPI_MISO Pin=IC?-22
+Added Pin To Net: NetName=ESP32_SPI_MOSI Pin=IC?-23
+Added Pin To Net: NetName=NetIC3_22 Pin=IC?-24
+Added Pin To Net: NetName=NetIC3_19 Pin=IC?-25
+Added Pin To Net: NetName=USR_CONFIG1 Pin=IC?-26
+Added Pin To Net: NetName=USR_CONFIG2 Pin=IC?-27
+Added Pin To Net: NetName=USR_CONFIG3 Pin=IC?-28
+Added Pin To Net: NetName=NetC36_1 Pin=IC?-30
+Added Pin To Net: NetName=GND Pin=IC?-31
+Added Pin To Net: NetName=3.3VDC Pin=IC?-32
+Added Pin To Net: NetName=USR_CONFIG4 Pin=IC?-35
+Added Pin To Net: NetName=USR_BUTTON Pin=IC?-36
+Added Pin To Net: NetName=NetIC3_17 Pin=IC?-39
+Added Pin To Net: NetName=NetIC3_16 Pin=IC?-40
+Added Pin To Net: NetName=ESP32_RES3 Pin=IC?-41
+Added Pin To Net: NetName=STM32_DBG_RX Pin=IC?-42
+Added Pin To Net: NetName=STM32_DBG_TX Pin=IC?-43
+Added Pin To Net: NetName=ESP32_RESET Pin=IC?-44
+Added Pin To Net: NetName=STM32_DBG_SWDIO Pin=IC?-46
+Added Pin To Net: NetName=GND Pin=IC?-47
+Added Pin To Net: NetName=3.3VDC Pin=IC?-48
+Added Pin To Net: NetName=STM32_DBG_SWCLK Pin=IC?-49
+Added Pin To Net: NetName=LED_PIXEL_STATE_VFS Pin=IC?-50
+Added Pin To Net: NetName=STM32_DBG_SWO Pin=IC?-55
+Added Pin To Net: NetName=NetIC3_23 Pin=IC?-56
+Added Pin To Net: NetName=NetIC3_15 Pin=IC?-57
+Added Pin To Net: NetName=NetIC4_23 Pin=IC?-61
+Added Pin To Net: NetName=NetIC4_24 Pin=IC?-62
+Added Pin To Net: NetName=GND Pin=IC?-63
+Added Pin To Net: NetName=3.3VDC Pin=IC?-64
+Added Pin To Net: NetName=NetIC?_8 Pin=IC?-8
+Added Pin To Net: NetName=NetIC?_8 Pin=J7-7
+Added Net: Name=NetIC?_8
+Added Pin To Net: NetName=NetIC?_9 Pin=IC?-9
+Added Pin To Net: NetName=NetIC?_9 Pin=J7-5
+Added Net: Name=NetIC?_9
+Added Pin To Net: NetName=NetIC?_10 Pin=IC?-10
+Added Pin To Net: NetName=NetIC?_10 Pin=J7-4
+Added Net: Name=NetIC?_10
+Added Pin To Net: NetName=NetIC?_12 Pin=IC?-12
+Added Pin To Net: NetName=NetIC?_12 Pin=L3-1
+Added Net: Name=NetIC?_12
+Added Pin To Net: NetName=NetIC?_29 Pin=IC?-29
+Added Pin To Net: NetName=NetIC?_29 Pin=P1-4
+Added Net: Name=NetIC?_29
+Added Pin To Net: NetName=NetIC?_33 Pin=IC?-33
+Added Pin To Net: NetName=NetIC?_33 Pin=J7-3
+Added Net: Name=NetIC?_33
+Added Pin To Net: NetName=NetIC?_34 Pin=IC?-34
+Added Pin To Net: NetName=NetIC?_34 Pin=J7-6
+Added Net: Name=NetIC?_34
+Added Pin To Net: NetName=NetIC?_37 Pin=IC?-37
+Added Pin To Net: NetName=NetIC?_37 Pin=J6-3
+Added Net: Name=NetIC?_37
+Added Pin To Net: NetName=NetIC?_38 Pin=IC?-38
+Added Pin To Net: NetName=NetIC?_38 Pin=J6-4
+Added Net: Name=NetIC?_38
+Added Pin To Net: NetName=NetIC?_51 Pin=IC?-51
+Added Pin To Net: NetName=NetIC?_51 Pin=J10-3
+Added Pin To Net: NetName=NetIC?_51 Pin=R7-1
+Added Net: Name=NetIC?_51
+Added Pin To Net: NetName=NetIC?_52 Pin=IC?-52
+Added Pin To Net: NetName=NetIC?_52 Pin=J10-4
+Added Pin To Net: NetName=NetIC?_52 Pin=R8-1
+Added Net: Name=NetIC?_52
+Added Pin To Net: NetName=NetIC?_53 Pin=IC?-53
+Added Pin To Net: NetName=NetIC?_53 Pin=J7-8
+Added Net: Name=NetIC?_53
+Added Pin To Net: NetName=NetIC?_58 Pin=IC?-58
+Added Pin To Net: NetName=NetIC?_58 Pin=J2-1
+Added Net: Name=NetIC?_58
+Added Pin To Net: NetName=NetIC?_59 Pin=IC?-59
+Added Pin To Net: NetName=NetIC?_59 Pin=J3-1
+Added Net: Name=NetIC?_59
+Added Pin To Net: NetName=NetIC?_60 Pin=IC?-60
+Added Pin To Net: NetName=NetIC?_60 Pin=R12-1
+Added Net: Name=NetIC?_60
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C26 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C27 C 100nF 0603
+Add Class Member: Failed to add class member : Component IC3 TB6612FNG
+Added Member To Class: ClassName=U_Microcrontroller Member=Component IC? STM32F446RE

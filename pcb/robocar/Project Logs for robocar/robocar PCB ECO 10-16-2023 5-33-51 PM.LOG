@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetIC5_29 Pin=P1-4
+Added Component: Designator=R14(0805)
+Add component (AddParameter): Name = "Part ID"; Value = "R_220R_0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Dissipation"; Value = "125mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 10pcs (CHF)"; Value = "0.052"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "A129741CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetIC5_29 Pin=R14-1
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP1_4 Pin=R14-2
+Added Net: Name=NetP1_4
+Added Member To Class: ClassName=robocar Member=Component R14 R 220R 0805

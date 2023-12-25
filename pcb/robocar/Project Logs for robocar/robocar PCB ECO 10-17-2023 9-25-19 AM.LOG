@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=3.3VDC Pin=J10-1
+Removed Pin From Net: NetName=GND Pin=J10-2
+Removed Pin From Net: NetName=NetIC5_51 Pin=J10-3
+Removed Pin From Net: NetName=NetIC5_52 Pin=J10-4
+Removed Pin From Net: NetName=GND Pin=J10-5
+Removed Member From Class: ClassName=robocar Member=J10
+Added Component: Designator=J3(PicoBlade_5_Vertical)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "538-53047-0510"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3VDC Pin=J3-1
+Added Pin To Net: NetName=GND Pin=J3-2
+Added Pin To Net: NetName=NetIC5_51 Pin=J3-3
+Added Pin To Net: NetName=NetIC5_52 Pin=J3-4
+Added Pin To Net: NetName=GND Pin=J3-5
+Added Member To Class: ClassName=robocar Member=Component J3 PicoBlade_5_Vertical

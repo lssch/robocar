@@ -1,0 +1,138 @@
+Removed Member From Class: ClassName=robocar Member=C29
+Removed Member From Class: ClassName=robocar Member=J11
+Removed Member From Class: ClassName=U_Microcrontroller Member=R5
+Removed Member From Class: ClassName=robocar Member=R9
+Add Component: Footprint Not Found SOP65P760X160-24N
+Added Component: Designator=P1(SK6812B)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4691/13170955"; VariantName = "[No Variations]"
+Added Component: Designator=P2(SK6812B)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4691/13170955"; VariantName = "[No Variations]"
+Added Component: Designator=P3(SK6812B)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4691/13170955"; VariantName = "[No Variations]"
+Added Component: Designator=P4(SK6812B)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Supplier"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.digikey.ch/en/products/detail/adafruit-industries-llc/4691/13170955"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin IC3-1
+Add Pin To Net: Unknown Pin: Pin IC3-2
+Add Pin To Net: Unknown Pin: Pin IC3-3
+Add Pin To Net: Unknown Pin: Pin IC3-4
+Add Pin To Net: Unknown Pin: Pin IC3-5
+Add Pin To Net: Unknown Pin: Pin IC3-6
+Add Pin To Net: Unknown Pin: Pin IC3-7
+Add Pin To Net: Unknown Pin: Pin IC3-8
+Add Pin To Net: Unknown Pin: Pin IC3-9
+Add Pin To Net: Unknown Pin: Pin IC3-10
+Add Pin To Net: Unknown Pin: Pin IC3-11
+Add Pin To Net: Unknown Pin: Pin IC3-12
+Add Pin To Net: Unknown Pin: Pin IC3-13
+Add Pin To Net: Unknown Pin: Pin IC3-14
+Add Pin To Net: Unknown Pin: Pin IC3-15
+Add Pin To Net: Unknown Pin: Pin IC3-16
+Add Pin To Net: Unknown Pin: Pin IC3-17
+Add Pin To Net: Unknown Pin: Pin IC3-18
+Add Pin To Net: Unknown Pin: Pin IC3-19
+Add Pin To Net: Unknown Pin: Pin IC3-20
+Add Pin To Net: Unknown Pin: Pin IC3-21
+Add Pin To Net: Unknown Pin: Pin IC3-22
+Add Pin To Net: Unknown Pin: Pin IC3-23
+Add Pin To Net: Unknown Pin: Pin IC3-24
+Add Pin To Net: Unknown Pin: Pin IC5-1
+Add Pin To Net: Unknown Pin: Pin IC5-2
+Add Pin To Net: Unknown Pin: Pin IC5-7
+Add Pin To Net: Unknown Pin: Pin IC5-8
+Add Pin To Net: Unknown Pin: Pin IC5-9
+Add Pin To Net: Unknown Pin: Pin IC5-10
+Add Pin To Net: Unknown Pin: Pin IC5-11
+Add Pin To Net: Unknown Pin: Pin IC5-12
+Add Pin To Net: Unknown Pin: Pin IC5-13
+Add Pin To Net: Unknown Pin: Pin IC5-14
+Add Pin To Net: Unknown Pin: Pin IC5-15
+Add Pin To Net: Unknown Pin: Pin IC5-16
+Add Pin To Net: Unknown Pin: Pin IC5-17
+Add Pin To Net: Unknown Pin: Pin IC5-18
+Add Pin To Net: Unknown Pin: Pin IC5-19
+Add Pin To Net: Unknown Pin: Pin IC5-20
+Add Pin To Net: Unknown Pin: Pin IC5-21
+Add Pin To Net: Unknown Pin: Pin IC5-22
+Add Pin To Net: Unknown Pin: Pin IC5-23
+Add Pin To Net: Unknown Pin: Pin IC5-24
+Add Pin To Net: Unknown Pin: Pin IC5-25
+Add Pin To Net: Unknown Pin: Pin IC5-26
+Add Pin To Net: Unknown Pin: Pin IC5-27
+Add Pin To Net: Unknown Pin: Pin IC5-28
+Add Pin To Net: Unknown Pin: Pin IC5-29
+Add Pin To Net: Unknown Pin: Pin IC5-30
+Add Pin To Net: Unknown Pin: Pin IC5-31
+Add Pin To Net: Unknown Pin: Pin IC5-32
+Add Pin To Net: Unknown Pin: Pin IC5-33
+Add Pin To Net: Unknown Pin: Pin IC5-34
+Add Pin To Net: Unknown Pin: Pin IC5-35
+Add Pin To Net: Unknown Pin: Pin IC5-36
+Add Pin To Net: Unknown Pin: Pin IC5-37
+Add Pin To Net: Unknown Pin: Pin IC5-38
+Add Pin To Net: Unknown Pin: Pin IC5-39
+Add Pin To Net: Unknown Pin: Pin IC5-40
+Add Pin To Net: Unknown Pin: Pin IC5-41
+Add Pin To Net: Unknown Pin: Pin IC5-42
+Add Pin To Net: Unknown Pin: Pin IC5-43
+Add Pin To Net: Unknown Pin: Pin IC5-44
+Add Pin To Net: Unknown Pin: Pin IC5-46
+Add Pin To Net: Unknown Pin: Pin IC5-47
+Add Pin To Net: Unknown Pin: Pin IC5-48
+Add Pin To Net: Unknown Pin: Pin IC5-49
+Add Pin To Net: Unknown Pin: Pin IC5-50
+Add Pin To Net: Unknown Pin: Pin IC5-51
+Add Pin To Net: Unknown Pin: Pin IC5-52
+Add Pin To Net: Unknown Pin: Pin IC5-53
+Add Pin To Net: Unknown Pin: Pin IC5-55
+Add Pin To Net: Unknown Pin: Pin IC5-56
+Add Pin To Net: Unknown Pin: Pin IC5-57
+Add Pin To Net: Unknown Pin: Pin IC5-58
+Add Pin To Net: Unknown Pin: Pin IC5-59
+Add Pin To Net: Unknown Pin: Pin IC5-60
+Add Pin To Net: Unknown Pin: Pin IC5-61
+Add Pin To Net: Unknown Pin: Pin IC5-62
+Add Pin To Net: Unknown Pin: Pin IC5-63
+Add Pin To Net: Unknown Pin: Pin IC5-64
+Added Pin To Net: NetName=5VDC Pin=P1-1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=NetIC5_29 Pin=P1-4
+Added Pin To Net: NetName=5VDC Pin=P2-1
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=NetP1_2 Pin=P2-4
+Added Pin To Net: NetName=5VDC Pin=P3-1
+Added Pin To Net: NetName=NetP3_2 Pin=P3-2
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Pin To Net: NetName=NetP2_2 Pin=P3-4
+Added Pin To Net: NetName=5VDC Pin=P4-1
+Added Pin To Net: NetName=GND Pin=P4-3
+Added Pin To Net: NetName=NetP3_2 Pin=P4-4
+Added Member To Class: ClassName=robocar Member=Component C24 C 10nF 0603
+Added Member To Class: ClassName=robocar Member=Component C26 C 100uF ALUM
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C28 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C30 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C32 C 4.7uF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C34 C 1uF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C36 C 100nF 0603
+Added Member To Class: ClassName=U_Microcrontroller Member=Component C38 C 4.7uF 0603
+Add Class Member: Failed to add class member : Component IC3 TB6612FNG
+Add Class Member: Failed to add class member : Component IC5 STM32F446RE
+Added Member To Class: ClassName=robocar Member=Component J9 PicoBlade_5_Vertical
+Added Member To Class: ClassName=robocar Member=Component J10 PicoBlade_5_Angled
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J12 2Pin_Male
+Added Member To Class: ClassName=robocar Member=Component P1 SK6812B
+Added Member To Class: ClassName=robocar Member=Component P2 SK6812B
+Added Member To Class: ClassName=robocar Member=Component P3 SK6812B
+Added Member To Class: ClassName=robocar Member=Component P4 SK6812B
+Added Member To Class: ClassName=robocar Member=Component R5 R 1K5 0805
+Added Member To Class: ClassName=robocar Member=Component R6 R 1K5 0805
+Added Member To Class: ClassName=robocar Member=Component R7 R 1K 0805
+Added Member To Class: ClassName=robocar Member=Component R8 R 1K 0805
+Added Member To Class: ClassName=U_Microcrontroller Member=Component R10 R 220R 0805
+Added Member To Class: ClassName=U_Microcrontroller Member=Component R11 R 220R 0805
+Added Member To Class: ClassName=U_Microcrontroller Member=Component R13 R 10K 0805

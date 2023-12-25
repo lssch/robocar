@@ -1,0 +1,135 @@
+Removed Pin From Net: NetName=Reset Pin=C24-1
+Removed Pin From Net: NetName=ESP32_SPI_CS Pin=IC5-3
+Removed Pin From Net: NetName=ESP32_SPI_CLK Pin=IC5-4
+Removed Pin From Net: NetName=ESP32_SPI_MISO Pin=IC5-5
+Removed Pin From Net: NetName=ESP32_SPI_MOSI Pin=IC5-6
+Removed Pin From Net: NetName=NetIC1_5 Pin=J4-1
+Removed Pin From Net: NetName=NetIC1_1 Pin=J4-2
+Removed Pin From Net: NetName=NetIC1_11 Pin=J5-1
+Removed Pin From Net: NetName=NetIC1_7 Pin=J5-2
+Removed Pin From Net: NetName=Reset Pin=J13-12
+Removed Pin From Net: NetName=STM32_DBG_TX Pin=J13-13
+Removed Pin From Net: NetName=STM32_DBG_RX Pin=J13-14
+Removed Pin From Net: NetName=Reset Pin=R13-1
+Change Component Footprint: Designator=J4 Old Footprint=XT30PW-F New Footprint=Header1x2_254
+Change Component Footprint: Designator=J5 Old Footprint=XT30PW-F New Footprint=Header1x2_254
+Change Component Comment : Designator=J4 Old Comment=XT30PW New Comment=2Pin_Male
+Change Component Comment : Designator=J5 Old Comment=XT30PW New Comment=2Pin_Male
+Change component parameters: Designator = "J4" ("J4"); Footprint = "XT30PW-F"; UniqueID = "\AKNPPYRJ" ("\AKNPPYRJ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J5" ("J5"); Footprint = "XT30PW-F"; UniqueID = "\ZHMWPZYO" ("\ZHMWPZYO")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J15(Header1x2_254)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J16(Header1x2_254)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part ID"; Value = "Header_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price 1pc (CHF)"; Value = "0.13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "732-5315-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=User_Button Pin=C24-1
+Add Pin To Net: Unknown Pin: Pin IC4-1
+Add Pin To Net: Unknown Pin: Pin IC4-7
+Add Pin To Net: Unknown Pin: Pin IC4-10
+Add Pin To Net: Unknown Pin: Pin IC4-11
+Add Pin To Net: Unknown Pin: Pin IC4-12
+Add Pin To Net: Unknown Pin: Pin IC4-13
+Add Pin To Net: Unknown Pin: Pin IC4-14
+Add Pin To Net: Unknown Pin: Pin IC4-15
+Add Pin To Net: Unknown Pin: Pin IC4-18
+Add Pin To Net: Unknown Pin: Pin IC4-19
+Add Pin To Net: Unknown Pin: Pin IC4-20
+Add Pin To Net: Unknown Pin: Pin IC4-21
+Add Pin To Net: Unknown Pin: Pin IC4-22
+Add Pin To Net: Unknown Pin: Pin IC4-23
+Add Pin To Net: Unknown Pin: Pin IC4-24
+Add Pin To Net: Unknown Pin: Pin IC4-25
+Add Pin To Net: Unknown Pin: Pin IC4-26
+Add Pin To Net: Unknown Pin: Pin IC4-27
+Add Pin To Net: Unknown Pin: Pin IC4-29
+Add Pin To Net: Unknown Pin: Pin IC4-30
+Add Pin To Net: Unknown Pin: Pin IC4-31
+Add Pin To Net: Unknown Pin: Pin IC4-32
+Add Pin To Net: Unknown Pin: Pin IC4-33
+Add Pin To Net: Unknown Pin: Pin IC4-34
+Add Pin To Net: Unknown Pin: Pin IC4-39
+Add Pin To Net: Unknown Pin: Pin IC4-40
+Add Pin To Net: Unknown Pin: Pin IC4-42
+Add Pin To Net: Unknown Pin: Pin IC4-43
+Add Pin To Net: Unknown Pin: Pin IC4-44
+Add Pin To Net: Unknown Pin: Pin IC4-46
+Add Pin To Net: Unknown Pin: Pin IC4-47
+Add Pin To Net: Unknown Pin: Pin IC4-48
+Add Pin To Net: Unknown Pin: Pin IC4-49
+Add Pin To Net: Unknown Pin: Pin IC4-55
+Add Pin To Net: Unknown Pin: Pin IC4-56
+Add Pin To Net: Unknown Pin: Pin IC4-57
+Add Pin To Net: Unknown Pin: Pin IC4-60
+Add Pin To Net: Unknown Pin: Pin IC4-61
+Add Pin To Net: Unknown Pin: Pin IC4-62
+Add Pin To Net: Unknown Pin: Pin IC4-63
+Add Pin To Net: Unknown Pin: Pin IC4-64
+Added Pin To Net: NetName=ESP32_SPI_CS Pin=IC5-5
+Added Pin To Net: NetName=ESP32_SPI_CLK Pin=IC5-6
+Added Pin To Net: NetName=ESP32_SPI_MISO Pin=IC5-7
+Added Pin To Net: NetName=ESP32_SPI_MOSI Pin=IC5-8
+Added Pin To Net: NetName=NetIC1_1 Pin=J5-1
+Added Pin To Net: NetName=NetIC1_5 Pin=J5-2
+Added Pin To Net: NetName=User_Button Pin=J13-12
+Added Pin To Net: NetName=STM32_DBG_RX Pin=J13-13
+Added Pin To Net: NetName=STM32_DBG_TX Pin=J13-14
+Added Pin To Net: NetName=GND Pin=J15-1
+Added Pin To Net: NetName=NetIC1_11 Pin=J16-1
+Added Pin To Net: NetName=NetIC1_7 Pin=J16-2
+Added Pin To Net: NetName=User_Button Pin=R13-1
+Change Net Name : Old Net Name=Reset New Net Name=USER_BUTTON
+Change Net Name : Old Net Name=User_Button New Net Name=RESET
+Added Pin To Net: NetName=ESP32_RESV1 Pin=IC5-3
+Added Net: Name=ESP32_RESV1
+Added Pin To Net: NetName=ESP32_RESV2 Pin=IC5-4
+Added Net: Name=ESP32_RESV2
+Added Pin To Net: NetName=ESP32_RESV3 Pin=IC5-9
+Added Net: Name=ESP32_RESV3
+Added Pin To Net: NetName=LED_STATE Pin=P6-4
+Added Net: Name=LED_STATE
+Added Pin To Net: NetName=NetIC4_8 Pin=J9-8
+Added Net: Name=NetIC4_8
+Added Pin To Net: NetName=NetIC4_9 Pin=J9-6
+Added Net: Name=NetIC4_9
+Added Pin To Net: NetName=NetIC4_37 Pin=J6-3
+Added Net: Name=NetIC4_37
+Added Pin To Net: NetName=NetIC4_38 Pin=J6-4
+Added Net: Name=NetIC4_38
+Added Pin To Net: NetName=NetIC4_51 Pin=J14-3
+Added Net: Name=NetIC4_51
+Added Pin To Net: NetName=NetIC4_52 Pin=J14-4
+Added Net: Name=NetIC4_52
+Added Pin To Net: NetName=NetIC4_58 Pin=J1-1
+Added Net: Name=NetIC4_58
+Added Pin To Net: NetName=NetIC4_59 Pin=J3-1
+Added Net: Name=NetIC4_59
+Added Pin To Net: NetName=USR_CONFIG3 Pin=J15-2
+Added Net: Name=USR_CONFIG3
+Add Class Member: Failed to add class member : Component IC4 STM32F446RE
+Added Member To Class: ClassName=U_Microcrontroller Member=Component J15 2Pin_Male
+Added Member To Class: ClassName=robocar Member=Component J16 2Pin_Male

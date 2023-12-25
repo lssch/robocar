@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=5VDC Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J2-3
+Removed Pin From Net: NetName=NetIC5_59 Pin=J3-1
+Removed Pin From Net: NetName=5VDC Pin=J3-2
+Removed Pin From Net: NetName=GND Pin=J3-3
+Removed Member From Class: ClassName=robocar Member=J3
+Change Component Footprint: Designator=J2 Old Footprint=Header1x3_254 New Footprint=61300621121
+Change Component Comment : Designator=J2 Old Comment=3Pin_Male New Comment=Pinheader_2x3
+Change component parameters: Designator = "J2" ("J2"); Footprint = "Header1x3_254"; UniqueID = "\HVJFFPVQ" ("\HVJFFPVQ")
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Rs"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "8281522P"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetIC5_59 Pin=J2-2
+Added Pin To Net: NetName=5VDC Pin=J2-3
+Added Pin To Net: NetName=5VDC Pin=J2-4
+Added Pin To Net: NetName=GND Pin=J2-5
+Added Pin To Net: NetName=GND Pin=J2-6

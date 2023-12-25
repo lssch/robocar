@@ -1,0 +1,42 @@
+Change Component Designator: OldDesignator=IC? NewDesignator=IC5
+Add Component: Footprint Not Found SOP65P760X160-24N
+Add Pin To Net: Unknown Pin: Pin IC3-1
+Add Pin To Net: Unknown Pin: Pin IC3-2
+Add Pin To Net: Unknown Pin: Pin IC3-3
+Add Pin To Net: Unknown Pin: Pin IC3-4
+Add Pin To Net: Unknown Pin: Pin IC3-5
+Add Pin To Net: Unknown Pin: Pin IC3-6
+Add Pin To Net: Unknown Pin: Pin IC3-7
+Add Pin To Net: Unknown Pin: Pin IC3-8
+Add Pin To Net: Unknown Pin: Pin IC3-9
+Add Pin To Net: Unknown Pin: Pin IC3-10
+Add Pin To Net: Unknown Pin: Pin IC3-11
+Add Pin To Net: Unknown Pin: Pin IC3-12
+Add Pin To Net: Unknown Pin: Pin IC3-13
+Add Pin To Net: Unknown Pin: Pin IC3-14
+Add Pin To Net: Unknown Pin: Pin IC3-15
+Add Pin To Net: Unknown Pin: Pin IC3-16
+Add Pin To Net: Unknown Pin: Pin IC3-17
+Add Pin To Net: Unknown Pin: Pin IC3-18
+Add Pin To Net: Unknown Pin: Pin IC3-19
+Add Pin To Net: Unknown Pin: Pin IC3-20
+Add Pin To Net: Unknown Pin: Pin IC3-21
+Add Pin To Net: Unknown Pin: Pin IC3-22
+Add Pin To Net: Unknown Pin: Pin IC3-23
+Add Pin To Net: Unknown Pin: Pin IC3-24
+Change Net Name : Old Net Name=NetIC?_8 New Net Name=NetIC5_8
+Change Net Name : Old Net Name=NetIC?_9 New Net Name=NetIC5_9
+Change Net Name : Old Net Name=NetIC?_10 New Net Name=NetIC5_10
+Change Net Name : Old Net Name=NetIC?_12 New Net Name=NetIC5_12
+Change Net Name : Old Net Name=NetIC?_29 New Net Name=NetIC5_29
+Change Net Name : Old Net Name=NetIC?_33 New Net Name=NetIC5_33
+Change Net Name : Old Net Name=NetIC?_34 New Net Name=NetIC5_34
+Change Net Name : Old Net Name=NetIC?_37 New Net Name=NetIC5_37
+Change Net Name : Old Net Name=NetIC?_38 New Net Name=NetIC5_38
+Change Net Name : Old Net Name=NetIC?_51 New Net Name=NetIC5_51
+Change Net Name : Old Net Name=NetIC?_52 New Net Name=NetIC5_52
+Change Net Name : Old Net Name=NetIC?_53 New Net Name=NetIC5_53
+Change Net Name : Old Net Name=NetIC?_58 New Net Name=NetIC5_58
+Change Net Name : Old Net Name=NetIC?_59 New Net Name=NetIC5_59
+Change Net Name : Old Net Name=NetIC?_60 New Net Name=NetIC5_60
+Add Class Member: Failed to add class member : Component IC3 TB6612FNG
