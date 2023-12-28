@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lars Schwarz">
-<meta name="dcterms.date" content="2023-12-24">
+<meta name="dcterms.date" content="2023-12-28">
 
 <title>Dokumentiation Robocar</title>
 <style>
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -41,7 +75,12 @@ ul.task-list li input[type="checkbox"] {
         background: blue;
       }
 </style>
+<script src="Documentation_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="Documentation_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="Documentation_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -50,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Dokumentiation Robocar</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Dokumentiation Robocar</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Mobiles Robotikprojekt I</p>
                       </div>
   </div>
@@ -68,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 24, 2023</p>
+        <p class="date">December 28, 2023</p>
       </div>
     </div>
     
@@ -96,7 +135,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#blockschaltbild" id="toc-blockschaltbild" class="nav-link" data-scroll-target="#blockschaltbild">Blockschaltbild</a></li>
   <li><a href="#schema-pcb-design" id="toc-schema-pcb-design" class="nav-link" data-scroll-target="#schema-pcb-design">Schema &amp; PCB-Design</a></li>
-  <li><a href="#spannungsversorgung" id="toc-spannungsversorgung" class="nav-link" data-scroll-target="#spannungsversorgung">Spannungsversorgung</a></li>
+  <li><a href="#messungen-buc-konverter" id="toc-messungen-buc-konverter" class="nav-link" data-scroll-target="#messungen-buc-konverter">Messungen BUC-Konverter</a>
+  <ul class="collapse">
+  <li><a href="#wirkungsgrad" id="toc-wirkungsgrad" class="nav-link" data-scroll-target="#wirkungsgrad">Wirkungsgrad</a></li>
+  <li><a href="#spannungsrippel" id="toc-spannungsrippel" class="nav-link" data-scroll-target="#spannungsrippel">Spannungsrippel</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a>
   <ul class="collapse">
@@ -112,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#visualisierung" id="toc-visualisierung" class="nav-link" data-scroll-target="#visualisierung">Visualisierung</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../../Documentation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Documentation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -222,7 +265,7 @@ Vorsicht
 </section>
 <section id="hardware-1" class="level1">
 <h1>Hardware</h1>
-<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" width="80%" data-fig-align="center">
+<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="80%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="res/img/Robocar_Fusion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
@@ -287,11 +330,63 @@ Figure&nbsp;2: PCB
 </figcaption>
 </figure>
 </div>
+<p>Das Robocar wird durch 8xAA Batterien versorgt und verfügt über eine zweistufige Spannungswandlersystem um Spannungslevels für <span class="math inline">\(12\,\text{VDC}\)</span> (Endstufe Motorensteurung), <span class="math inline">\(5\,\text{VDC}\)</span> (Perepherie) und <span class="math inline">\(3.3\,\text{VDC}\)</span> (Microcontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung (<span class="math inline">\(9\,\text{V} - 14\,\text{V}\)</span>) vom PCB getrennt werden.</p>
 <section id="blockschaltbild" class="level2">
 <h2 class="anchored" data-anchor-id="blockschaltbild">Blockschaltbild</h2>
+<div id="fig-Blockschaltbild" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Blockschaltbild-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/Blockschaltbild.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Blockschaltbild-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Blockschaltbild
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="schema-pcb-design" class="level2">
 <h2 class="anchored" data-anchor-id="schema-pcb-design">Schema &amp; PCB-Design</h2>
+<p>Das PCB verfüt über die folgenden Komponenten</p>
+<ul>
+<li>Spannungsversorgung
+<ul>
+<li><span class="math inline">\(12\,\text{VDC}\)</span> Eingang mit ESD- und Polaritäts-Schutz</li>
+<li><span class="math inline">\(12\,\text{VDC} \Rightarrow 5\,\text{VDC}\)</span> <a href="https://www.wikiwand.com/de/Abw%C3%A4rtswandler">BUC-Konverter</a></li>
+<li><span class="math inline">\(5\,\text{VDC} \Rightarrow 3.3\,\text{VDC}\)</span> <a href="https://www.wikiwand.com/de/Spannungsregler">LDO-Spannungsregler</a></li>
+</ul></li>
+<li>Mikrocontroller
+<ul>
+<li>Maincontroller STM32</li>
+<li>Kommunikationscontroller ESP32</li>
+</ul></li>
+<li>Debugging
+<ul>
+<li>1 Power-ok LED</li>
+<li>Reset-Button</li>
+<li>Konfigurierbarer User-Button</li>
+<li>2 RGB Statusled für Mikrocontroller (WS2812)</li>
+<li>Tag-Connect 6-Pol für ESP32</li>
+<li>Tag-Connect 14-Pol für STM32</li>
+</ul></li>
+<li>Perepherie
+<ul>
+<li>Lagesensor (MPU6050)</li>
+<li>ToF-Kamera (MaixSense-A0101)</li>
+<li>ToF-Spot (TF-LC02)</li>
+<li>Fluss-Sensor (ADNS3080)</li>
+<li>Motorentreiber (TB6612FNG)</li>
+<li>Navigationslichter (SK6812)</li>
+<li>Ringbeleuchtung Fluss-Sensor (8xWS2812)</li>
+</ul></li>
+<li>Stecker
+<ul>
+<li>1 XT30 Stecker für den Batterieanschluss</li>
+<li>2 XT30 Buchsen für Motoren</li>
+<li>2 3-Pin Header für Servos</li>
+<li>4 GPIO Pins mit <span class="math inline">\(\text{GND}\)</span></li>
+</ul></li>
+</ul>
+<p>Dem Schema sind alle weiteren Details zu bezüglich Auslegung und Dimensionierung zu entnehmen.</p>
 <div id="fig-Schema" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -323,13 +418,97 @@ Figure&nbsp;2: PCB
 </div>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Schema
+Figure&nbsp;4: Schema
 </figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-note callout-titled" title="Info">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Info
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Für Komponenten welche nicht der FHGR-Altium Bibliothek entnommen wurden, wurde jeweils eine eigene Bibliothek erstellt, welche unter <code>PCB/lib</code> gefunden werden kann.</p>
+</div>
+</div>
 </section>
-<section id="spannungsversorgung" class="level2">
-<h2 class="anchored" data-anchor-id="spannungsversorgung">Spannungsversorgung</h2>
+<section id="messungen-buc-konverter" class="level2">
+<h2 class="anchored" data-anchor-id="messungen-buc-konverter">Messungen BUC-Konverter</h2>
+<section id="wirkungsgrad" class="level3">
+<h3 class="anchored" data-anchor-id="wirkungsgrad">Wirkungsgrad</h3>
+<p>Der Wirkungsgrad des BUC-Konverter wurde mithilfe eines Messwiderstandes von <span class="math inline">\(R = 10\,\Omega\)</span> gemessen, was zu einem theoretischen Strom von <span class="math inline">\(I = 500\,\text{mA}\)</span> auf der Abgangsseite führt.</p>
+<p><strong>Messungen</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Spannung</th>
+<th style="text-align: left;">Strom</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Eingangseite</strong></td>
+<td style="text-align: left;"><span class="math inline">\(U_{in} \approx 12.24 \,\text{V}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(I_{in} \approx 290 \,\text{mA}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Ausgangseite</strong></td>
+<td style="text-align: left;"><span class="math inline">\(U_{out} \approx 4.89 \,\text{V}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(I_{out} \approx 510 \,\text{mA}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Berechnung</strong> <span class="math display">\[\eta = \frac{P_{out}}{P_{in}} = \frac{U_{out} \cdot I_{out}}{U_{in} \cdot I_{in}} \approx 72\,\%\]</span></p>
+<div id="a32f00aa" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Nummerische Implementation</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>U_in <span class="op">=</span> <span class="fl">12.24</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>I_in <span class="op">=</span> <span class="fl">0.29</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>U_out <span class="op">=</span> <span class="fl">4.98</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>I_out <span class="op">=</span> <span class="fl">0.51</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="bu">print</span>(<span class="ss">f'P_in = </span><span class="sc">{</span>(P_in <span class="op">:=</span> U_in<span class="op">*</span>I_in)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="bu">print</span>(<span class="ss">f'P_out = </span><span class="sc">{</span>(P_out <span class="op">:=</span> U_out<span class="op">*</span>I_out)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="bu">print</span>(<span class="ss">f'n = </span><span class="sc">{</span>P_out<span class="op">/</span>P_in<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>P_in = 3.55 W
+P_out = 2.54 W
+n = 71.55 %</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Note">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwändig herausgelötet werden müssten:</p>
+<ul>
+<li>Microcontroller STM32</li>
+<li>Kommunikationscontroller ESP32</li>
+<li>IMU MPU6050</li>
+</ul>
+<p>Aus diesem Grund fliesst immer ein gewisser Strom, welcher bei der Abgangsseite nicht erfasst werden kann durch diese Komponenten, was eine genaue Messung verunmöglicht und den tiefen Wirkungsgrad ausmacht.</p>
+</div>
+</div>
+</section>
+<section id="spannungsrippel" class="level3">
+<h3 class="anchored" data-anchor-id="spannungsrippel">Spannungsrippel</h3>
 <div id="fig-ripple" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ripple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -361,10 +540,25 @@ Figure&nbsp;3: Schema
 </div>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-ripple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Spannungsrippel
+Figure&nbsp;5: Spannungsrippel
 </figcaption>
 </figure>
 </div>
+<p>Der Spannungsrippel beträgt ca. <span class="math inline">\(\Delta U_5 \approx 150\,\text{mVDC}\)</span>, was <span class="math inline">\(3\,\%\)</span> von <span class="math inline">\(5\,\text{VDC}\)</span> entspricht.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Note">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt so sind um einiges bessere Werte zu erwarten.</p>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="software" class="level1">
@@ -389,9 +583,112 @@ TODO
 </div>
 <section id="softwareaufbau" class="level2">
 <h2 class="anchored" data-anchor-id="softwareaufbau">Softwareaufbau</h2>
+<p>Das Robocar wurde aufgrund der erhöten übersichtlichkeit und Abkapselung der einzelnen Module mit <a href="https://www.wikiwand.com/de/C%2B%2B">C++</a> programmiert. Dabei wurde für jede Komponente ein eigens Modul entwickelt und implementiert.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Komponente</th>
+<th style="text-align: left;">Modulname</th>
+<th style="text-align: left;">Softwaremodul</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">IMU</a></td>
+<td style="text-align: left;">MPU60X0</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://wiki.sipeed.com/hardware/en/maixsense/index.html">ToF-Kamera</a></td>
+<td style="text-align: left;">A010</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="">ToF-Sensor</a></td>
+<td style="text-align: left;">TFLC02</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D">Visual-Flow-Kamera</a></td>
+<td style="text-align: left;">ADNS3080</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="">Neopixel</a></td>
+<td style="text-align: left;">WS2812/SK6812</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="">Servo</a></td>
+<td style="text-align: left;">MG90</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="">H-Brücke</a></td>
+<td style="text-align: left;">TB6612FNG</td>
+<td style="text-align: left;"><a href="">Github</a></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="flussdiagramm" class="level2">
 <h2 class="anchored" data-anchor-id="flussdiagramm">Flussdiagramm</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">stateDiagram
+  state "Robocar Statemachine" as ROBOCAR {
+    state "Initialising" as INIT
+    state "Running - Substatemachine Operatingmode" as RUNNING {
+      state "Manual driving" as MANUAL
+      state "Assisted driving" as ASSISTED
+      state "Driving to disatance" as DISTANCE
+      state "Autonomous driving" as AUTONOMOUS
+
+      [*] --&gt; MANUAL
+
+      MANUAL --&gt; ASSISTED
+      MANUAL --&gt; DISTANCE
+      MANUAL --&gt; AUTONOMOUS
+
+      ASSISTED --&gt; MANUAL
+      ASSISTED --&gt; DISTANCE
+      ASSISTED --&gt; AUTONOMOUS
+
+      DISTANCE --&gt; MANUAL
+      DISTANCE --&gt; ASSISTED
+      DISTANCE --&gt; AUTONOMOUS
+
+      AUTONOMOUS --&gt; MANUAL
+      AUTONOMOUS --&gt; ASSISTED
+      AUTONOMOUS --&gt; DISTANCE
+    }
+
+    note right of RUNNING
+      Substatemachine to handle the 
+      requestet driving mode by the GUI.
+    end note
+
+    state "Emergency Stop" as EMS
+
+    [*] --&gt; INIT
+    INIT --&gt; EMS : Emergencystop
+    INIT --&gt; RUNNING : Initialisation done
+
+    RUNNING --&gt; EMS : Emergencystop
+
+    EMS --&gt; INIT : Quit
+
+  note left of RUNNING
+    Main statemachine of the Robocar.
+  end note
+  }
+</pre>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="funktionalität" class="level2">
 <h2 class="anchored" data-anchor-id="funktionalität">Funktionalität</h2>
