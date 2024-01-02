@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lars Schwarz">
-<meta name="dcterms.date" content="2023-12-28">
+<meta name="dcterms.date" content="2024-01-02">
 
 <title>Dokumentiation Robocar</title>
 <style>
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 28, 2023</p>
+        <p class="date">January 2, 2024</p>
       </div>
     </div>
     
@@ -147,12 +147,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#flussdiagramm" id="toc-flussdiagramm" class="nav-link" data-scroll-target="#flussdiagramm">Flussdiagramm</a></li>
   <li><a href="#funktionalität" id="toc-funktionalität" class="nav-link" data-scroll-target="#funktionalität">Funktionalität</a></li>
   <li><a href="#modulbeschreibungen" id="toc-modulbeschreibungen" class="nav-link" data-scroll-target="#modulbeschreibungen">Modulbeschreibungen</a></li>
+  <li><a href="#todo-software" id="toc-todo-software" class="nav-link" data-scroll-target="#todo-software">ToDo-Software</a></li>
   </ul></li>
   <li><a href="#stand-der-dinge" id="toc-stand-der-dinge" class="nav-link" data-scroll-target="#stand-der-dinge">Stand der Dinge</a>
   <ul class="collapse">
   <li><a href="#vernsteuerung" id="toc-vernsteuerung" class="nav-link" data-scroll-target="#vernsteuerung">Vernsteuerung</a></li>
   <li><a href="#kommunkation-zwischen-den-mikrocontrollern" id="toc-kommunkation-zwischen-den-mikrocontrollern" class="nav-link" data-scroll-target="#kommunkation-zwischen-den-mikrocontrollern">Kommunkation zwischen den Mikrocontrollern</a></li>
   <li><a href="#visualisierung" id="toc-visualisierung" class="nav-link" data-scroll-target="#visualisierung">Visualisierung</a></li>
+  </ul></li>
+  <li><a href="#bekannte-probleme" id="toc-bekannte-probleme" class="nav-link" data-scroll-target="#bekannte-probleme">Bekannte Probleme</a>
+  <ul class="collapse">
+  <li><a href="#reset-des-robocars" id="toc-reset-des-robocars" class="nav-link" data-scroll-target="#reset-des-robocars">Reset des Robocars</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Documentation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -265,7 +270,7 @@ Vorsicht
 </section>
 <section id="hardware-1" class="level1">
 <h1>Hardware</h1>
-<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="80%">
+<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" width="80%" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="res/img/Robocar_Fusion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
@@ -469,7 +474,7 @@ Info
 </tbody>
 </table>
 <p><strong>Berechnung</strong> <span class="math display">\[\eta = \frac{P_{out}}{P_{in}} = \frac{U_{out} \cdot I_{out}}{U_{in} \cdot I_{in}} \approx 72\,\%\]</span></p>
-<div id="a32f00aa" class="cell" data-execution_count="1">
+<div id="41b06810" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Nummerische Implementation</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>U_in <span class="op">=</span> <span class="fl">12.24</span></span>
@@ -563,24 +568,6 @@ Note
 </section>
 <section id="software" class="level1">
 <h1>Software</h1>
-<div class="callout callout-style-default callout-important callout-titled" title="TODO">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Beschreibung der Software mit Flussdiagramm.</li>
-<li>Beschreibung der Funktionalität des Roboters</li>
-<li>Kurze Beschreibung der Funktionen mit Eingangs/Ausgangsparametern</li>
-<li>Was ist noch zu programmieren?</li>
-</ul>
-</div>
-</div>
 <section id="softwareaufbau" class="level2">
 <h2 class="anchored" data-anchor-id="softwareaufbau">Softwareaufbau</h2>
 <p>Das Robocar wurde aufgrund der erhöten übersichtlichkeit und Abkapselung der einzelnen Module mit <a href="https://www.wikiwand.com/de/C%2B%2B">C++</a> programmiert. Dabei wurde für jede Komponente ein eigens Modul entwickelt und implementiert.</p>
@@ -697,6 +684,9 @@ TODO
 <h2 class="anchored" data-anchor-id="modulbeschreibungen">Modulbeschreibungen</h2>
 <p>Die einzelnen Modulbeschreibungen können den jewiligen <code>.hpp</code> Source-Dokumenten als <a href="https://www.doxygen.nl">Doxygen</a> entnommen werden und werden hier nicht explizit aufgeführt.</p>
 </section>
+<section id="todo-software" class="level2">
+<h2 class="anchored" data-anchor-id="todo-software">ToDo-Software</h2>
+</section>
 </section>
 <section id="stand-der-dinge" class="level1">
 <h1>Stand der Dinge</h1>
@@ -712,6 +702,14 @@ TODO
 <section id="visualisierung" class="level2">
 <h2 class="anchored" data-anchor-id="visualisierung">Visualisierung</h2>
 <p>Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.</p>
+</section>
+</section>
+<section id="bekannte-probleme" class="level1">
+<h1>Bekannte Probleme</h1>
+<section id="reset-des-robocars" class="level2">
+<h2 class="anchored" data-anchor-id="reset-des-robocars">Reset des Robocars</h2>
+<p>Wird über den Reset-Button ein Reset-Event ausgelösst, so kann es sein, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten anzahl an Pingversuchen automatisch den Error-Handler aufruft.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a>  <span class="cf">if</span> <span class="op">(</span>imu<span class="op">.</span>init<span class="op">(</span><span class="dv">3</span><span class="op">)</span> <span class="op">!=</span> SUCCESS<span class="op">)</span> Error_Handler<span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 
