@@ -8,6 +8,7 @@ lang: de
 title-block-banner: blue
 format:
   revealjs: 
+    scrollable: true
     multiplex: true
     transition: slide
     transition-speed: fast
@@ -19,74 +20,20 @@ format:
     chalkboard: true
 ---
 
-# Einführung
-Diese Dokumentaiton dient zur Bedienung und Weiterentlwicklung des "Robocars", welches im Rahmen des [Mobile Robotics Projekt 1](https://www.fhgr.ch/fileadmin/studium/bachelorangebot/mobile_robotics/FHGR-Bachelorstudium-Mobile_Robotics-Moduluebersicht.pdf#page=21) an der [FHGR](https://fhgr.ch) während dem 3. Semester entwickelt wurde.
-
-
-::: {.callout-important title="TODO"}
-Bild des Robocars
+:::{.callout-note title=todo}
+- Code stats
+- Defekte Komponenten Stats
+- 
 :::
-
-::: {.callout-note title="Info"}
-Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentaiton.
-
-Dieses Dokument wurde mit [Quarto-Markdown](https://quarto.org) erstellt und ist sowol in PDF als auch in HTML verfügbar.
-:::
-
 
 # Übersicht
-Das Robocar basiert auf einem stark modifiziertem Chassis von [YF-Robot](https://yfrobot.com/collections/robot-kits/products/steering-gear-robot) und verwendet einen [STM-32F446RE](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html) Mikrocontroller, welcher auf einem eigen dafür entrofenem PCB mit verschiedenen Perepherien ([M5Stack ESP32-S3](https://docs.m5stack.com/en/core/StampS3), [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/), [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html), [ToF-Sensor](), [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D)) kommuniziert.
-
-Das Robocar soll mittels sehr günstiger Hardware in der lage sein verngesteuert zu werden und als weiterführende Ziele gewisse Assistenzfunktionen wie Kollisionsdetektion und Spurhalteasistenz verfügen. Weiter soll eine einfache Kollisionsverhinderung mittels ausweichmanöver implementiert sein.
-
-# Handbuch
-## Benötigte Komponenten
-
-- Robocar
-- Geladene Batterien!
-- Laptop mit GUI-Applikation
-
-::: {.callout-tip title="Tip"}
-    Sicherstellen, dass die Batterien ganz geladen sind.
-:::
-
-## Hardware
-
-1. Geladene Batterien in den Batteriehalter einsetzen.
-2. Batteriehalter in die vorgesehene Halterung einstzen.
-3. Batteriestecker XT30 mit dem PCB verbinden.
-4. Robocar am Hauptschalter einschalten.
-
-::: {.callout-important title="Vorsicht"}
-    Beim Einsetzen der Batteriehalterung in die Vorgesehene Halterung auf dem Robocar soll darauf geachtet werden, dass die Litzen des ToF-Spot Sensors nicht gequetscht werden!
-:::
-
-## GUI 
-Über die GUI können alle Sensordaten live abgefragt werden und alle Parameter persistent verändert werden.
-
-1. GUI-Applikation starten
-2. Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (Kabelgebunden) herstellen.
-
-## Spass haben
-Folgende Betriebsmodis wurden implementiert:
-
-- **Manuelles verfahren**: Das Robocar kann mittels Slider in der GUI oder dem Controller verfahren werden.
-- **Assistiertes verfahren**: Das Robocar kann mittel Slider in der GUI oder dem Controller verfahren werden unter Berücksichtigung der Spurhaltefunktion.
-- **Distanz-Modus**: Das Robocar fährt auf ein Objekt zu und haltet bei einer gewissen Distanz vor dem Objekt automatisch an.
-- **Kollisionsverhinderung**: Das Robocar umfährt selbstständig Hindernisse ohne Eingreifen einer Drittperson.
+ 
 
 # Hardware
 
 ![Fusion-Export](res/img/Robocar_Fusion.png){#fig-fusion-export fig-align="center" width=80%}
 
 # Elektronik
-::: {.callout-important title="TODO"}
-- Beschreibung der gesammten Elektronik
-- Beschreibung der Elektronikblöcke mit Einzelheiten zur Dimensionierung
-:::
-
-Die Elektronik basiert auf einem eigens entworenem PCB. Auf dem PCB wird die gesammte Spannungsregelung sowie Spannungverteilung an die jewiligen Perepherien geregelt sowie die Kommunikaiton mit dem Mikrocontroller realisiert.
-
 ::: {#fig-pcb layout-ncol=2}
 ![Vorderseite](res/img/PCB_front.jpg){#fig-pcb-front}
 
@@ -95,184 +42,70 @@ Die Elektronik basiert auf einem eigens entworenem PCB. Auf dem PCB wird die ges
 PCB
 :::
 
-Das Robocar wird durch 8xAA Batterien versorgt und verfügt über eine zweistufige Spannungswandlersystem um Spannungslevels für $12\,\text{VDC}$ (Endstufe Motorensteurung), $5\,\text{VDC}$ (Perepherie) und  $3.3\,\text{VDC}$ (Microcontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung ($9\,\text{V} - 14\,\text{V}$) vom PCB getrennt werden.
-
-## Blockschaltbild
-![Blockschaltbild](res/img/Blockschaltbild.svg){#fig-Blockschaltbild}
-
-## Schema & PCB-Design
-
-Das PCB verfüt über die folgenden Komponenten
-
-- Spannungsversorgung
-  - $12\,\text{VDC}$ Eingang mit ESD- und Polaritäts-Schutz
-  - $12\,\text{VDC} \Rightarrow 5\,\text{VDC}$ [BUC-Konverter](https://www.wikiwand.com/de/Abw%C3%A4rtswandler)
-  - $5\,\text{VDC} \Rightarrow 3.3\,\text{VDC}$ [LDO-Spannungsregler](https://www.wikiwand.com/de/Spannungsregler)
-- Mikrocontroller 
-  - Maincontroller STM32
-  - Kommunikationscontroller ESP32
-- Debugging
-  - 1 Power-ok LED
-  - Reset-Button
-  - Konfigurierbarer User-Button
-  - 2 RGB Statusled für Mikrocontroller (WS2812)
-  - Tag-Connect 6-Pol für ESP32
-  - Tag-Connect 14-Pol für STM32
-- Perepherie
-  - Lagesensor (MPU6050)
-  - ToF-Kamera (MaixSense-A0101)
-  - ToF-Spot (TF-LC02)
-  - Fluss-Sensor (ADNS3080)
-  - Motorentreiber (TB6612FNG)
-  - Navigationslichter (SK6812)
-  - Ringbeleuchtung Fluss-Sensor (8xWS2812)
-- Stecker
-  - 1 XT30 Stecker für den Batterieanschluss
-  - 2 XT30 Buchsen für Motoren
-  - 2 3-Pin Header für Servos
-  - 4 GPIO Pins mit $\text{GND}$
-
-Dem Schema sind alle weiteren Details zu bezüglich Auslegung und Dimensionierung zu entnehmen.
-
-::: {#fig-Schema layout-ncol=2}
-![Mikrocontroller](res/img/Schematic_1.jpg){#fig-Schema-Mikrocontroller}
-
-![Perepherie](res/img/Schematic_2.jpg){#fig-Schema-Perepherie}
-
-Schema
-:::
-
-::: {.callout-note title="Info"}
-Für Komponenten welche nicht der FHGR-Altium Bibliothek entnommen wurden, wurde jeweils eine eigene Bibliothek erstellt, welche unter `PCB/lib` gefunden werden kann.
-:::
-
-
-## Messungen BUC-Konverter
-### Wirkungsgrad
-Der Wirkungsgrad des BUC-Konverter wurde mithilfe eines Messwiderstandes von $R = 10\,\Omega$ gemessen, was zu einem theoretischen Strom von $I = 500\,\text{mA}$ auf der Abgangsseite führt.
-
-**Messungen**
-
-|  | Spannung | Strom |
-|:-----|:-----|:-----|
-| **Eingangseite** | $U_{in} \approx 12.24 \,\text{V}$ | $I_{in} \approx 290 \,\text{mA}$ |
-| **Ausgangseite** | $U_{out} \approx 4.89 \,\text{V}$ | $I_{out} \approx 510 \,\text{mA}$ |
-
-**Berechnung**
-$$\eta = \frac{P_{out}}{P_{in}} = \frac{U_{out} \cdot I_{out}}{U_{in} \cdot I_{in}} \approx 72\,\%$$
-
-```{python}
-#| code-summary: "Nummerische Implementation"
-U_in = 12.24
-I_in = 0.29
-U_out = 4.98
-I_out = 0.51
-
-print(f'P_in = {(P_in := U_in*I_in):.2f} W')
-print(f'P_out = {(P_out := U_out*I_out):.2f} W')
-print(f'n = {P_out/P_in*100:.2f} %')
-```
-::: {.callout-note title="Note"}
-Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwändig herausgelötet werden müssten:
-
-- Microcontroller STM32
-- Kommunikationscontroller ESP32
-- IMU MPU6050
-
-Aus diesem Grund fliesst immer ein gewisser Strom, welcher bei der Abgangsseite nicht erfasst werden kann durch diese Komponenten, was eine genaue Messung verunmöglicht und den tiefen Wirkungsgrad ausmacht.
-:::
-
-### Spannungsrippel
-::: {#fig-ripple layout-ncol=2}
-![KO](res/img/Measurement_ripple_5V.png){#fig-ripple-1}
-
-![KO Ausschnitt](res/img/Measurement_ripple_5V_zoomed.png){#fig-ripple-2}
-
-Spannungsrippel
-:::
-
-
-Der Spannungsrippel beträgt ca. $\Delta U_5 \approx 150\,\text{mVDC}$, was $3\,\%$ von $5\,\text{VDC}$ entspricht.
-
-::: {.callout-note title="Note"}
-Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt so sind um einiges bessere Werte zu erwarten.
-:::
-
-
 # Software
+![Comments](res/img/good_code.webp){#fig-comment}
+
 ## Softwareaufbau
-Das Robocar wurde aufgrund der erhöten übersichtlichkeit und Abkapselung der einzelnen Module mit [C++](https://www.wikiwand.com/de/C%2B%2B) programmiert. Dabei wurde für jede Komponente ein eigens Modul entwickelt und implementiert.
+- Objektorientiert in C++
+- 3 Verschiedene Oberflächen
+
+| Komponente | Typ | Softwaremodul |
+|:------|:------|:------:|
+| [STM32](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | Firmware | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
+| [ESP32](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | Firmware | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
+| [Robocar visualisation](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | GUI | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
+
+- Eigene Softwaremodule für jede Hardwarekomponente
 
 | Komponente | Modulname | Softwaremodul |
-|:------|:------|:------|
-| [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | MPU60X0 | [Github]() |
-| [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html) | A010 | [Github]() |
-| [ToF-Sensor]() | TFLC02 | [Github]() |
-| [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D) | ADNS3080 | [Github]() |
-| [Neopixel]() | WS2812/SK6812 | [Github]() |
-| [Servo]() | MG90| [Github]() |
-| [H-Brücke]() | TB6612FNG | [Github]() |
+|:------|:------|:------:|
+| [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | MPU60X0 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
+| [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html) | A010 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/A010) |
+| ToF-Sensor | TFLC02 | [Github](https://github.com/lssch/TFLC02) |
+| [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D) | ADNS3080 | [Github](https://github.com/lssch/ADNS3080) |
+| [Neopixel](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels) | WS2812/SK6812 | [Github](https://github.com/lssch/NeoPixel) |
+| Servo | MG90| [Github](https://github.com/lssch/Servo) |
+| [H-Brücke](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG) | TB6612FNG | [Github](https://github.com/lssch/TB6612FNG) |
 
+- GUI in [Typescript](https://www.typescriptlang.org/)
 
-## Flussdiagramm
+# Stats {auto-animate=true auto-animate-easing="ease-in-out"}
 ```{mermaid}
-stateDiagram
-  state "Robocar Statemachine" as ROBOCAR {
-    state "Initialising" as INIT
-    state "Running - Substatemachine Operatingmode" as RUNNING {
-      state "Manual driving" as MANUAL
-      state "Assisted driving" as ASSISTED
-      state "Driving to disatance" as DISTANCE
-      state "Autonomous driving" as AUTONOMOUS
-
-      [*] --> MANUAL
-
-      MANUAL --> ASSISTED
-      MANUAL --> DISTANCE
-      MANUAL --> AUTONOMOUS
-
-      ASSISTED --> MANUAL
-      ASSISTED --> DISTANCE
-      ASSISTED --> AUTONOMOUS
-
-      DISTANCE --> MANUAL
-      DISTANCE --> ASSISTED
-      DISTANCE --> AUTONOMOUS
-
-      AUTONOMOUS --> MANUAL
-      AUTONOMOUS --> ASSISTED
-      AUTONOMOUS --> DISTANCE
-    }
-
-    note right of RUNNING
-      Substatemachine to handle the 
-      requestet driving mode by the GUI.
-    end note
-
-    state "Emergency Stop" as EMS
-
-    [*] --> INIT
-    INIT --> EMS : Emergencystop
-    INIT --> RUNNING : Initialisation done
-
-    RUNNING --> EMS : Emergencystop
-
-    EMS --> INIT : Quit
-
-  note left of RUNNING
-    Main statemachine of the Robocar.
-  end note
-  }
+pie title Anzal geschriebene Codezeilen
+    "STM32 ca. 2'500" : 2500
+    "ESP32 ca. 900" : 900
+    "GUI ca. 3'300" : 3300
 ```
 
-## Funktionalität
+## {auto-animate=true auto-animate-easing="ease-in-out"}
+:::: {.columns}
 
-## Modulbeschreibungen
-Die einzelnen Modulbeschreibungen können den jewiligen `.hpp` Source-Dokumenten als [Doxygen](https://www.doxygen.nl) entnommen werden und werden hier nicht explizit aufgeführt.
+::: {.column}
 
-## ToDo-Software
+```{mermaid}
+pie title Anzal geschriebene Codezeilen
+    "STM32 ca. 2'500" : 2500
+    "ESP32 ca. 900" : 900
+    "GUI ca. 3'300" : 3300
+```
+:::
 
-# Stand der Dinge
+::: {.column}
+```{mermaid}
+pie title Anzahl Codezeilen
+    "Eigene STM32 ca. 2'500" : 2500
+    "Eigene ESP32 ca. 900" : 900
+    "Eigene GUI ca. 3'300" : 3300
+    "STM32 ca. 33'500" : 33500
+    "ESP32 ca. 16'100" : 16100
+    "GUI ca. 236'700" : 236700
+```
+:::
+
+::::
+
+
+
 
 ## Vernsteuerung
 Das Robocar ist zur Zeit nicht in der Lage Drahtlos verngestuerert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von [Electricui](https://electricui.com/) puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember sichergestellt sein.)
@@ -284,11 +117,3 @@ Zur Zeit werden immer alle Bytes der gesammten Datenstruktur übertragen, auch w
 
 ## Visualisierung
 Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.
-
-# Bekannte Probleme
-## Reset des Robocars
-Wird über den Reset-Button ein Reset-Event ausgelösst, so kann es sein, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten anzahl an Pingversuchen automatisch den Error-Handler aufruft.
-
-```cpp
-  if (imu.init(3) != SUCCESS) Error_Handler();
-```

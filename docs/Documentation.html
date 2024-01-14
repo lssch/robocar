@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lars Schwarz">
-<meta name="dcterms.date" content="2024-01-02">
+<meta name="dcterms.date" content="2024-01-14">
 
-<title>Dokumentiation Robocar</title>
+<title>Dokumentation Robocar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="Documentation_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Documentation_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Documentation_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Documentation_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="Documentation_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <style>
 
       .quarto-title-block .quarto-title-banner {
@@ -89,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Dokumentiation Robocar</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+      <div class="quarto-title-block"><div><h1 class="title">Dokumentation Robocar</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Mobiles Robotikprojekt I</p>
                       </div>
   </div>
@@ -107,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 2, 2024</p>
+        <p class="date">January 14, 2024</p>
       </div>
     </div>
     
@@ -151,13 +153,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#stand-der-dinge" id="toc-stand-der-dinge" class="nav-link" data-scroll-target="#stand-der-dinge">Stand der Dinge</a>
   <ul class="collapse">
-  <li><a href="#vernsteuerung" id="toc-vernsteuerung" class="nav-link" data-scroll-target="#vernsteuerung">Vernsteuerung</a></li>
+  <li><a href="#fernsteuerung" id="toc-fernsteuerung" class="nav-link" data-scroll-target="#fernsteuerung">Fernsteuerung</a></li>
+  <li><a href="#implementation-x-box-kontroller" id="toc-implementation-x-box-kontroller" class="nav-link" data-scroll-target="#implementation-x-box-kontroller">Implementation X-Box-Kontroller</a></li>
   <li><a href="#kommunkation-zwischen-den-mikrocontrollern" id="toc-kommunkation-zwischen-den-mikrocontrollern" class="nav-link" data-scroll-target="#kommunkation-zwischen-den-mikrocontrollern">Kommunkation zwischen den Mikrocontrollern</a></li>
+  <li><a href="#tof-kamera" id="toc-tof-kamera" class="nav-link" data-scroll-target="#tof-kamera">ToF-Kamera</a></li>
   <li><a href="#visualisierung" id="toc-visualisierung" class="nav-link" data-scroll-target="#visualisierung">Visualisierung</a></li>
+  <li><a href="#parameterhandler" id="toc-parameterhandler" class="nav-link" data-scroll-target="#parameterhandler">Parameterhandler</a></li>
   </ul></li>
   <li><a href="#bekannte-probleme" id="toc-bekannte-probleme" class="nav-link" data-scroll-target="#bekannte-probleme">Bekannte Probleme</a>
   <ul class="collapse">
   <li><a href="#reset-des-robocars" id="toc-reset-des-robocars" class="nav-link" data-scroll-target="#reset-des-robocars">Reset des Robocars</a></li>
+  <li><a href="#verbindungsprobleme-mit-gui" id="toc-verbindungsprobleme-mit-gui" class="nav-link" data-scroll-target="#verbindungsprobleme-mit-gui">Verbindungsprobleme mit GUI</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Documentation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -168,21 +174,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<div style="page-break-after: always;"></div>
 <section id="einführung" class="level1">
 <h1>Einführung</h1>
-<p>Diese Dokumentaiton dient zur Bedienung und Weiterentlwicklung des “Robocars”, welches im Rahmen des <a href="https://www.fhgr.ch/fileadmin/studium/bachelorangebot/mobile_robotics/FHGR-Bachelorstudium-Mobile_Robotics-Moduluebersicht.pdf#page=21">Mobile Robotics Projekt 1</a> an der <a href="https://fhgr.ch">FHGR</a> während dem 3. Semester entwickelt wurde.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="TODO">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Diese Dokumentation dient zur Bedienung und Weiterentwicklung des “Robocars”, das im Rahmen des <a href="https://www.fhgr.ch/fileadmin/studium/bachelorangebot/mobile_robotics/FHGR-Bachelorstudium-Mobile_Robotics-Moduluebersicht.pdf#page=21">Mobile Robotics Projekt 1</a> an der <a href="https://fhgr.ch">FHGR</a> während des dritten Semesters entwickelt wurde.</p>
+<div id="fig-robocar" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-robocar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/Robocar.jpeg" class="img-fluid figure-img">
 </div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Bild des Robocars</p>
-</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-robocar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Robocar
+</figcaption>
+</figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Info">
 <div class="callout-header d-flex align-content-center">
@@ -194,15 +198,18 @@ Info
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentaiton.</p>
-<p>Dieses Dokument wurde mit <a href="https://quarto.org">Quarto-Markdown</a> erstellt und ist sowol in PDF als auch in HTML verfügbar.</p>
+<ul>
+<li>Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentation.</li>
+<li>Dieses Dokument wurde mit <a href="https://quarto.org">Quarto-Markdown</a> erstellt und ist sowohl in PDF (ohne Videos) als auch in HTML (bevorzugt) verfügbar.</li>
+</ul>
 </div>
 </div>
 </section>
 <section id="übersicht" class="level1">
 <h1>Übersicht</h1>
-<p>Das Robocar basiert auf einem stark modifiziertem Chassis von <a href="https://yfrobot.com/collections/robot-kits/products/steering-gear-robot">YF-Robot</a> und verwendet einen <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html">STM-32F446RE</a> Mikrocontroller, welcher auf einem eigen dafür entrofenem PCB mit verschiedenen Perepherien (<a href="https://docs.m5stack.com/en/core/StampS3">M5Stack ESP32-S3</a>, <a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">IMU</a>, <a href="https://wiki.sipeed.com/hardware/en/maixsense/index.html">ToF-Kamera</a>, <a href="">ToF-Sensor</a>, <a href="https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D">Visual-Flow-Kamera</a>) kommuniziert.</p>
-<p>Das Robocar soll mittels sehr günstiger Hardware in der lage sein verngesteuert zu werden und als weiterführende Ziele gewisse Assistenzfunktionen wie Kollisionsdetektion und Spurhalteasistenz verfügen. Weiter soll eine einfache Kollisionsverhinderung mittels ausweichmanöver implementiert sein.</p>
+<p>Das Robocar basiert auf einem stark modifiziertem Chassis von <a href="https://yfrobot.com/collections/robot-kits/products/steering-gear-robot">YF-Robot</a> und verwendet einen <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html">STM-32F446RE</a> Mikrocontroller, welcher auf einem eigens dafür entworfenem PCB mit verschiedenen Peripherien (<a href="https://docs.m5stack.com/en/core/StampS3">M5Stack ESP32-S3</a>, <a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">IMU</a>, <a href="https://wiki.sipeed.com/hardware/en/maixsense/index.html">ToF-Kamera</a>, <a href="">ToF-Sensor</a>, <a href="https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D">Visual-Flow-Kamera</a>) kommuniziert.</p>
+<p>Das Robocar soll mittels sehr günstiger Hardware ferngesteuert werden und als weiterführende Ziele gewisse Assistenzfunktionen wie Kollisionsdetektion und Spurhalteasistenz verfügen. Weiter soll eine einfache Kollisionsverhinderung mittels Ausweichmanöver implementiert sein.</p>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="handbuch" class="level1">
 <h1>Handbuch</h1>
@@ -223,7 +230,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<pre><code>Sicherstellen, dass die Batterien ganz geladen sind.</code></pre>
+<p>Sicherstellen, dass die Batterien ganz geladen sind.</p>
 </div>
 </div>
 </section>
@@ -231,7 +238,7 @@ Tip
 <h2 class="anchored" data-anchor-id="hardware">Hardware</h2>
 <ol type="1">
 <li>Geladene Batterien in den Batteriehalter einsetzen.</li>
-<li>Batteriehalter in die vorgesehene Halterung einstzen.</li>
+<li>Batteriehalter in die vorgesehene Halterung einsetzen.</li>
 <li>Batteriestecker XT30 mit dem PCB verbinden.</li>
 <li>Robocar am Hauptschalter einschalten.</li>
 </ol>
@@ -245,61 +252,107 @@ Vorsicht
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<pre><code>Beim Einsetzen der Batteriehalterung in die Vorgesehene Halterung auf dem Robocar soll darauf geachtet werden, dass die Litzen des ToF-Spot Sensors nicht gequetscht werden!</code></pre>
+<p>
+Beim Einsetzen der Batteriehalterung in die vorgesehene Position auf dem Robocar, muss darauf geachtet werden, dass die Litzen des ToF-Spot Sensors nicht gequetscht werden!
+</p>
+<div id="fig-Quetschgefahr" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Quetschgefahr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/Kabelquetschung.jpeg" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Quetschgefahr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Kabelquetschung
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="gui" class="level2">
 <h2 class="anchored" data-anchor-id="gui">GUI</h2>
 <p>Über die GUI können alle Sensordaten live abgefragt werden und alle Parameter persistent verändert werden.</p>
+<div id="fig-gui-overview" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gui-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/Overview.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-gui-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: GUI Robocar
+</figcaption>
+</figure>
+</div>
 <ol type="1">
-<li>GUI-Applikation starten</li>
-<li>Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (Kabelgebunden) herstellen.</li>
+<li>GUI-Applikation starten <img src="res/img/no_devices_found.jpg" class="img-fluid" alt="GUI Robocar"></li>
+<li>Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (kabelgebunden) herstellen. <img src="res/img/select_device.jpg" class="img-fluid" alt="GUI Robocar"></li>
+<li>Werte und Parameter abfragen <img src="res/img/Viewing_data.jpg" id="fig-gui-overview" class="img-fluid" alt="GUI Robocar"> <img src="res/img/Changing_parameters.jpg" id="fig-gui-overview" class="img-fluid" alt="GUI Robocar"></li>
 </ol>
 </section>
 <section id="spass-haben" class="level2">
 <h2 class="anchored" data-anchor-id="spass-haben">Spass haben</h2>
 <p>Folgende Betriebsmodis wurden implementiert:</p>
+<div id="fig-Betriebsmodis" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Betriebsmodis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/Drive_mode.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Betriebsmodis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Betriebsmodis
+</figcaption>
+</figure>
+</div>
 <ul>
-<li><strong>Manuelles verfahren</strong>: Das Robocar kann mittels Slider in der GUI oder dem Controller verfahren werden.</li>
-<li><strong>Assistiertes verfahren</strong>: Das Robocar kann mittel Slider in der GUI oder dem Controller verfahren werden unter Berücksichtigung der Spurhaltefunktion.</li>
-<li><strong>Distanz-Modus</strong>: Das Robocar fährt auf ein Objekt zu und haltet bei einer gewissen Distanz vor dem Objekt automatisch an.</li>
+<li><strong>Manuelles Verfahren</strong>: Das Robocar kann mittels Slider in der GUI oder dem Controller bewegt werden.</li>
+<li><strong>Assistiertes Verfahren</strong>: Das Robocar kann mittel Slider in der GUI oder dem Controller, unter Berücksichtigung der Spurhaltefunktion, bewegt werden.</li>
+<li><strong>Distanz-Modus</strong>: Das Robocar fährt auf ein Objekt zu und hält bei einer parametrisierten Distanz mit einstellbarer Tolleranz vor dem Objekt automatisch an.</li>
 <li><strong>Kollisionsverhinderung</strong>: Das Robocar umfährt selbstständig Hindernisse ohne Eingreifen einer Drittperson.</li>
 </ul>
 </section>
 </section>
 <section id="hardware-1" class="level1">
 <h1>Hardware</h1>
-<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" width="80%" data-fig-align="center">
+<div id="fig-fusion-export" class="quarto-figure quarto-figure-center anchored" data-fig-align="center" width="80%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="res/img/Robocar_Fusion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Fusion-Export
+Figure&nbsp;5: Fusion-Export
 </figcaption>
 </figure>
 </div>
+<p>Für das Robocar wurden folgende Komponenten entworfen:</p>
+<ul>
+<li><p><strong>Grundplatte</strong></p>
+<p>Bindeglied für alle Komponenten und massgebend für die Steifigkeit des Fahrzeuges. Der Radabstand konnten im Vergleich zum Original-Chassis deutlich verringert werden.</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="res/data/Groundplate.mp4"></video></div></li>
+<li><p><strong>Batteriehalter</strong></p>
+<p>Der Batteriehalter wurde über der Vorderachse angebracht, um den Schwerpunkt nach vorne zu bringen. Die Batteriehalterung dient zudem als Halter für die Kamera.</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="res/data/Batteriehalter.mp4"></video></div></li>
+<li><p><strong>VFS mit Beleuchtungsring</strong></p>
+<p>Mechanisch stellte der Visual-Flow-Senser die grösste Herausforderung dar. Es musste darauf geschaut werden, dass der Sensor ein scharfes Bild des Boden aufnimmt und zudem musste der Boden noch zusätzlich beleuchtet werden.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="res/img/Vfs_light.png" class="img-fluid figure-img"></p>
+<figcaption>VFS-Beleuchtung</figcaption>
+</figure>
+</div></li>
+<li><p><strong>ToF-Spot Halterung</strong></p>
+<p>Der ToF-Spot Sensor wurde so auf dem Chassis montiert, dass er möglichst nahe über den Boden hinweg schaut, um so auch niedrige Objekte zu detektieren.</p>
+<div id="fig-tof" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/ToF-Spot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-tof-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: ToF-Spot Halterung
+</figcaption>
+</figure>
+</div></li>
+</ul>
 </section>
 <section id="elektronik" class="level1">
 <h1>Elektronik</h1>
-<div class="callout callout-style-default callout-important callout-titled" title="TODO">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Beschreibung der gesammten Elektronik</li>
-<li>Beschreibung der Elektronikblöcke mit Einzelheiten zur Dimensionierung</li>
-</ul>
-</div>
-</div>
-<p>Die Elektronik basiert auf einem eigens entworenem PCB. Auf dem PCB wird die gesammte Spannungsregelung sowie Spannungverteilung an die jewiligen Perepherien geregelt sowie die Kommunikaiton mit dem Mikrocontroller realisiert.</p>
+<p>Die Elektronik basiert auf einem eigens entworfenen PCB. Auf dem PCB wird die gesamte Spannungsregelung sowie Spannungverteilung an die jeweiligen Peripherien geregelt sowie die Kommunikation mit dem Mikrocontroller realisiert.</p>
 <div id="fig-pcb" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -308,7 +361,7 @@ TODO
 <div id="fig-pcb-front" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-pcb-front-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="res/img/PCB_front.jpg" class="img-fluid figure-img" data-ref-parent="fig-pcb">
+<img src="res/img/PCB_front.jpeg" class="img-fluid figure-img" data-ref-parent="fig-pcb">
 </div>
 <figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-pcb-front-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Vorderseite
@@ -331,11 +384,11 @@ TODO
 </div>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: PCB
+Figure&nbsp;7: PCB
 </figcaption>
 </figure>
 </div>
-<p>Das Robocar wird durch 8xAA Batterien versorgt und verfügt über eine zweistufige Spannungswandlersystem um Spannungslevels für <span class="math inline">\(12\,\text{VDC}\)</span> (Endstufe Motorensteurung), <span class="math inline">\(5\,\text{VDC}\)</span> (Perepherie) und <span class="math inline">\(3.3\,\text{VDC}\)</span> (Microcontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung (<span class="math inline">\(9\,\text{V} - 14\,\text{V}\)</span>) vom PCB getrennt werden.</p>
+<p>Das Robocar wird durch 8xAA Batterien versorgt und verfügt über ein zweistufiges Spannungswandlersystem, um Spannungslevels für <span class="math inline">\(12\,\text{VDC}\)</span> (Endstufe Motorensteuerung), <span class="math inline">\(5\,\text{VDC}\)</span> (Peripherie) und <span class="math inline">\(3.3\,\text{VDC}\)</span> (Mikrocontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung (<span class="math inline">\(9\,\text{V} - 14\,\text{V}\)</span>) vom PCB getrennt werden.</p>
 <section id="blockschaltbild" class="level2">
 <h2 class="anchored" data-anchor-id="blockschaltbild">Blockschaltbild</h2>
 <div id="fig-Blockschaltbild" class="quarto-figure quarto-figure-center anchored">
@@ -344,14 +397,14 @@ Figure&nbsp;2: PCB
 <img src="res/img/Blockschaltbild.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Blockschaltbild-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Blockschaltbild
+Figure&nbsp;8: Blockschaltbild
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="schema-pcb-design" class="level2">
 <h2 class="anchored" data-anchor-id="schema-pcb-design">Schema &amp; PCB-Design</h2>
-<p>Das PCB verfüt über die folgenden Komponenten</p>
+<p>Das PCB verfügt über die folgenden Komponenten:</p>
 <ul>
 <li>Spannungsversorgung
 <ul>
@@ -373,7 +426,7 @@ Figure&nbsp;3: Blockschaltbild
 <li>Tag-Connect 6-Pol für ESP32</li>
 <li>Tag-Connect 14-Pol für STM32</li>
 </ul></li>
-<li>Perepherie
+<li>Peripherie
 <ul>
 <li>Lagesensor (MPU6050)</li>
 <li>ToF-Kamera (MaixSense-A0101)</li>
@@ -391,7 +444,7 @@ Figure&nbsp;3: Blockschaltbild
 <li>4 GPIO Pins mit <span class="math inline">\(\text{GND}\)</span></li>
 </ul></li>
 </ul>
-<p>Dem Schema sind alle weiteren Details zu bezüglich Auslegung und Dimensionierung zu entnehmen.</p>
+<p>Dem Schema sind alle weiteren Details bezüglich Auslegung und Dimensionierung zu entnehmen.</p>
 <div id="fig-Schema" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -409,13 +462,13 @@ Figure&nbsp;3: Blockschaltbild
 </div>
 </div>
 <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Schema" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-Schema-Perepherie" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-Schema-Peripherie" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-Schema-Perepherie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-Schema-Peripherie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="res/img/Schematic_2.jpg" class="img-fluid figure-img" data-ref-parent="fig-Schema">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-Schema-Perepherie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Perepherie
+<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-Schema-Peripherie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Peripherie
 </figcaption>
 </figure>
 </div>
@@ -423,7 +476,7 @@ Figure&nbsp;3: Blockschaltbild
 </div>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Schema-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Schema
+Figure&nbsp;9: Schema
 </figcaption>
 </figure>
 </div>
@@ -437,7 +490,7 @@ Info
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Für Komponenten welche nicht der FHGR-Altium Bibliothek entnommen wurden, wurde jeweils eine eigene Bibliothek erstellt, welche unter <code>PCB/lib</code> gefunden werden kann.</p>
+<p>Für Komponenten, die nicht der FHGR-Altium Bibliothek entnommen werden konnte, wurde jeweils eine eigene Bibliothek erstellt. Diese ist unter <code>PCB/lib</code> zu finden.</p>
 </div>
 </div>
 </section>
@@ -474,17 +527,17 @@ Info
 </tbody>
 </table>
 <p><strong>Berechnung</strong> <span class="math display">\[\eta = \frac{P_{out}}{P_{in}} = \frac{U_{out} \cdot I_{out}}{U_{in} \cdot I_{in}} \approx 72\,\%\]</span></p>
-<div id="41b06810" class="cell" data-execution_count="1">
+<div id="a92ed40d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Nummerische Implementation</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>U_in <span class="op">=</span> <span class="fl">12.24</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>I_in <span class="op">=</span> <span class="fl">0.29</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>U_out <span class="op">=</span> <span class="fl">4.98</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>I_out <span class="op">=</span> <span class="fl">0.51</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="bu">print</span>(<span class="ss">f'P_in = </span><span class="sc">{</span>(P_in <span class="op">:=</span> U_in<span class="op">*</span>I_in)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="bu">print</span>(<span class="ss">f'P_out = </span><span class="sc">{</span>(P_out <span class="op">:=</span> U_out<span class="op">*</span>I_out)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="bu">print</span>(<span class="ss">f'n = </span><span class="sc">{</span>P_out<span class="op">/</span>P_in<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>U_in <span class="op">=</span> <span class="fl">12.24</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>I_in <span class="op">=</span> <span class="fl">0.29</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>U_out <span class="op">=</span> <span class="fl">4.98</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>I_out <span class="op">=</span> <span class="fl">0.51</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="bu">print</span>(<span class="ss">f'P_in = </span><span class="sc">{</span>(P_in <span class="op">:=</span> U_in<span class="op">*</span>I_in)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(<span class="ss">f'P_out = </span><span class="sc">{</span>(P_out <span class="op">:=</span> U_out<span class="op">*</span>I_out)<span class="sc">:.2f}</span><span class="ss"> W'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="bu">print</span>(<span class="ss">f'n = </span><span class="sc">{</span>P_out<span class="op">/</span>P_in<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss"> %'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>P_in = 3.55 W
@@ -502,13 +555,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwändig herausgelötet werden müssten:</p>
+<p>Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwendig herausgelötet werden müssten:</p>
 <ul>
-<li>Microcontroller STM32</li>
+<li>Mikrocontroller STM32</li>
 <li>Kommunikationscontroller ESP32</li>
 <li>IMU MPU6050</li>
 </ul>
-<p>Aus diesem Grund fliesst immer ein gewisser Strom, welcher bei der Abgangsseite nicht erfasst werden kann durch diese Komponenten, was eine genaue Messung verunmöglicht und den tiefen Wirkungsgrad ausmacht.</p>
+<p>Aus diesem Grund fliesst immer ein gewisser Strom, der bei der Abgangsseite nicht erfasst werden kann. Dies führt zu einem Querstrom, welcher nicht erfasst werden kann und eine genaue Messung verunmöglicht sowie den tiefen Wirkungsgrad ausmacht.</p>
 </div>
 </div>
 </section>
@@ -545,7 +598,7 @@ Note
 </div>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-ripple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Spannungsrippel
+Figure&nbsp;10: Spannungsrippel
 </figcaption>
 </figure>
 </div>
@@ -560,7 +613,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt so sind um einiges bessere Werte zu erwarten.</p>
+<p>Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt, so sind um einiges bessere Werte zu erwarten.</p>
 </div>
 </div>
 </section>
@@ -570,50 +623,50 @@ Note
 <h1>Software</h1>
 <section id="softwareaufbau" class="level2">
 <h2 class="anchored" data-anchor-id="softwareaufbau">Softwareaufbau</h2>
-<p>Das Robocar wurde aufgrund der erhöten übersichtlichkeit und Abkapselung der einzelnen Module mit <a href="https://www.wikiwand.com/de/C%2B%2B">C++</a> programmiert. Dabei wurde für jede Komponente ein eigens Modul entwickelt und implementiert.</p>
+<p>Das Robocar wurde aufgrund der erhöten Übersichtlichkeit und Abkapselung der einzelnen Module mit <a href="https://www.wikiwand.com/de/C%2B%2B">C++</a> programmiert. Dafür wurde für jede Komponente ein eigenes Modul entwickelt und implementiert.</p>
 <table class="table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Komponente</th>
 <th style="text-align: left;">Modulname</th>
-<th style="text-align: left;">Softwaremodul</th>
+<th style="text-align: center;">Softwaremodul</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">IMU</a></td>
 <td style="text-align: left;">MPU60X0</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0">Github</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="https://wiki.sipeed.com/hardware/en/maixsense/index.html">ToF-Kamera</a></td>
 <td style="text-align: left;">A010</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/A010">Github</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="">ToF-Sensor</a></td>
+<td style="text-align: left;">ToF-Sensor</td>
 <td style="text-align: left;">TFLC02</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/TFLC02">Github</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D">Visual-Flow-Kamera</a></td>
 <td style="text-align: left;">ADNS3080</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/ADNS3080">Github</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="">Neopixel</a></td>
+<td style="text-align: left;"><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels">Neopixel</a></td>
 <td style="text-align: left;">WS2812/SK6812</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/NeoPixel">Github</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="">Servo</a></td>
+<td style="text-align: left;">Servo</td>
 <td style="text-align: left;">MG90</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/Servo">Github</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="">H-Brücke</a></td>
+<td style="text-align: left;"><a href="https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&amp;prodName=TB6612FNG">H-Brücke</a></td>
 <td style="text-align: left;">TB6612FNG</td>
-<td style="text-align: left;"><a href="">Github</a></td>
+<td style="text-align: center;"><a href="https://github.com/lssch/TB6612FNG">Github</a></td>
 </tr>
 </tbody>
 </table>
@@ -679,37 +732,138 @@ Note
 </section>
 <section id="funktionalität" class="level2">
 <h2 class="anchored" data-anchor-id="funktionalität">Funktionalität</h2>
+<p>Die Hauptschwierigkeit bei der Implementierung ist die Synchronisation der <a href="https://github.com/lssch/types">Datenstrukturen</a> zwischen den beiden Mikrocontrollern. So müssen Überschreibungen vermieden werden und requests/acknowlidges passend gesetzt und gelöscht werden. Zwischen dem ESP32 und dem STM32 wurde eine SPI-Kommunikation eingerichtet und das ESP32 kommuniziert mit dem Laptop über UART. Über ein <a href="https://github.com/lssch/comms">eigenes Protokoll</a> zwischen STM32 und ESP32 wird in jedem Zyklus, welcher durch das ESP32 initiiert wird die Variablen zwischen den Mikrocontrollern synchronisiert. Dabei wird von simultan aus/in den DMA Speicher auf beiden Mikrocontrollern geschrieben.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant STM32
+    participant ESP32
+    participant Laptop
+
+    Note over ESP32,STM32: SPI fullduplex
+
+    loop Sync
+      ESP32 -&gt; STM32: package TX/RX
+    end
+
+    loop Sample
+      ESP32 -&gt;&gt; Laptop: EUI read package
+    end
+
+    Laptop -&gt;&gt; ESP32: EUI write package
+
+    Note over ESP32,Laptop: UART
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Note">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei einer Hardware-Revision würde es Sinn machen die SPI-Kommunikaiton durch eine UART-Kommunikation zu ersetzen und das ESP32 nur als UART-Bridge einzusetzen.</p>
+</div>
+</div>
+<p>Der Rest der Software ist trivial und <a href="https://www.wikiwand.com/en/Self-documenting_code">selbsterklärend</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Tip">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="fig-good-code" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-good-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="res/img/good_code.jpeg" class="img-fluid figure-img">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-good-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Useless comment
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>A comment is a failure to express yourself in code. If you fail, then write a comment; but try not to fail. <a href="https://twitter.com/unclebobmartin/status/870311898545258497">Robert Martin</a></li>
+<li>The comments will inevitably become out of date, and untrustworthy comments are worse than no comments at all. <a href="https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer">The Pragmatic Programmer</a></li>
+<li><a href="https://medium.com/@douglas.iacovelli/make-your-code-explain-itself-if-it-has-too-many-comments-youre-doing-it-wrong-c856a0df6a65">Make your code explain itself. If it has too many comments, you’re doing it wrong!</a></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="modulbeschreibungen" class="level2">
 <h2 class="anchored" data-anchor-id="modulbeschreibungen">Modulbeschreibungen</h2>
-<p>Die einzelnen Modulbeschreibungen können den jewiligen <code>.hpp</code> Source-Dokumenten als <a href="https://www.doxygen.nl">Doxygen</a> entnommen werden und werden hier nicht explizit aufgeführt.</p>
+<p>Die einzelnen Modulbeschreibungen können den jewiligen <code>.hpp</code> Source-Dokumenten als <a href="https://www.doxygen.nl">Doxygen</a> entnommen werden und werden hier nicht explizit aufgeführt!</p>
 </section>
 <section id="todo-software" class="level2">
 <h2 class="anchored" data-anchor-id="todo-software">ToDo-Software</h2>
+<p>ToDo’s für eizenlne Module den einzelnen Doxygen-Kommentaren zu entnehmen und werden hier nicht explizit gelistet.</p>
+<ul>
+<li>Generell muss ein <a href="https://www.wikiwand.com/de/Refactoring">Refactoring</a> getätigt werden.</li>
+<li>Implementierung eines <a href="https://www.wikiwand.com/de/Watchdog">Watchdog</a>.</li>
+<li>Implementierung des Kollisionsverhinderungs-Modus</li>
+<li>Umschalten auf die Odometry-Daten des IMU wenn die Bodequalität des VFS zu schlecht wird.</li>
+<li>“Richtige” Implementation eines PI-Speedcontrollers -&gt; Jetztiger oszilliert praktisch ungedämpft.</li>
+</ul>
 </section>
 </section>
 <section id="stand-der-dinge" class="level1">
 <h1>Stand der Dinge</h1>
-<section id="vernsteuerung" class="level2">
-<h2 class="anchored" data-anchor-id="vernsteuerung">Vernsteuerung</h2>
-<p>Das Robocar ist zur Zeit nicht in der Lage Drahtlos verngestuerert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von <a href="https://electricui.com/">Electricui</a> puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember sichergestellt sein.)</p>
+<section id="fernsteuerung" class="level2">
+<h2 class="anchored" data-anchor-id="fernsteuerung">Fernsteuerung</h2>
+<p>Das Robocar ist zur Zeit nicht in der Lage drahtlos ferngesteuert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von <a href="https://electricui.com/">Electricui</a> puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember 2023 sichergestellt sein.)</p>
+</section>
+<section id="implementation-x-box-kontroller" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-x-box-kontroller">Implementation X-Box-Kontroller</h2>
+<p>Das Robocar ist zur Zeit nicht in der Lage über einen X-Box-Kontroller ferngestuert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von <a href="https://electricui.com/">Electricui</a> puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember 2023 sichergestellt sein.)</p>
 </section>
 <section id="kommunkation-zwischen-den-mikrocontrollern" class="level2">
 <h2 class="anchored" data-anchor-id="kommunkation-zwischen-den-mikrocontrollern">Kommunkation zwischen den Mikrocontrollern</h2>
 <p>Die Kommunikaiton zwischen den Mikrocontrollern ist hochgradig ineffizient und könnte um einiges datensparender implementiert werden. Dadurch würden sich auch die Zugriffszeiten von der GUI zum ESP32 verringern, was eine höhere Aktualisierungsrate ermöglicht.</p>
-<p>Zur Zeit werden immer alle Bytes der gesammten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10’000 Bytes betragen kann.</p>
+<p>Zur Zeit werden immer alle Bytes der gesamten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10’000 Bytes betragen kann.</p>
+</section>
+<section id="tof-kamera" class="level2">
+<h2 class="anchored" data-anchor-id="tof-kamera">ToF-Kamera</h2>
+<p>Leider gelang es nicht, die Pixeldaten der Kamera auf den STM32 zu übertragen. Die UART-Schnittstelle scheint auf zwei verschiedenen Kameras immer deaktiviert zu sein. Auch wenn diese über das Konfigurationstool aktiviert wird. Aus diesem Grund wurde der Kollisionsverhinderungs-Modus auch nicht implementiert.</p>
 </section>
 <section id="visualisierung" class="level2">
 <h2 class="anchored" data-anchor-id="visualisierung">Visualisierung</h2>
-<p>Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.</p>
+<p>Die Visualisierung wurde nicht kompiliert, um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Plattformen (Windows, MacOS, Linux) gemacht werden.</p>
+</section>
+<section id="parameterhandler" class="level2">
+<h2 class="anchored" data-anchor-id="parameterhandler">Parameterhandler</h2>
+<p>Zur Zeit können keine Parameter persisteng gespeichert werden. Bei einem Neustart gehen alle Werte verlohren. Für den STM32F401RE funktioniert der Code und ein Registermap des Flash-Speichers ist im Web zu finden. Für den STM32F446RE ist keine Dokumentation über Den Flashaufbau zu finden und die Pages und Addressen stimmen nicht mit denen des STM32F401RE überein.</p>
 </section>
 </section>
 <section id="bekannte-probleme" class="level1">
 <h1>Bekannte Probleme</h1>
 <section id="reset-des-robocars" class="level2">
 <h2 class="anchored" data-anchor-id="reset-des-robocars">Reset des Robocars</h2>
-<p>Wird über den Reset-Button ein Reset-Event ausgelösst, so kann es sein, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten anzahl an Pingversuchen automatisch den Error-Handler aufruft.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a>  <span class="cf">if</span> <span class="op">(</span>imu<span class="op">.</span>init<span class="op">(</span><span class="dv">3</span><span class="op">)</span> <span class="op">!=</span> SUCCESS<span class="op">)</span> Error_Handler<span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wird über den Reset-Button ein Reset-Event ausgelöst, so ist es möglich, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten Anzahl an Pingversuchen automatisch den Error-Handler aufruft.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a>  <span class="cf">if</span> <span class="op">(</span>imu<span class="op">.</span>init<span class="op">(</span><span class="dv">3</span><span class="op">)</span> <span class="op">!=</span> SUCCESS<span class="op">)</span> Error_Handler<span class="op">();</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="verbindungsprobleme-mit-gui" class="level2">
+<h2 class="anchored" data-anchor-id="verbindungsprobleme-mit-gui">Verbindungsprobleme mit GUI</h2>
+<p>Zum Teil wird das Robocar von der GUI nicht erkannt und kann somit nicht ferngesteurt werden. In diesem Fall muss nach folgendem Ablauf vorgegangen werden:</p>
+<ol type="1">
+<li>Robocar vom Laptop trennen</li>
+<li>Robocar ausschalten</li>
+<li>GUI “refresh” drücken</li>
+<li>Robocar erneut mit dem Laptop verbinden</li>
+<li>Wird das Robocar erkannt, so muss auf dem Robocar der Reset-Button gedrückt werden</li>
+<li>GUI “connect” drücken</li>
+</ol>
 </section>
 </section>
 
@@ -1164,6 +1318,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Dokumentiation Robocar"
+title: "Dokumentation Robocar"
 subtitle: "Mobiles Robotikprojekt I"
 author: "Lars Schwarz"
 date: last-modified
@@ -29,6 +29,7 @@ format:
       - right=2cm
       - top=2cm
       - bottom=2cm
+    lof: true
     header-includes:
       - \usepackage{bbold}
       - \usepackage{float}
@@ -72,90 +73,120 @@ format:
       - \renewcommand{\ker}[1]{\operatorname{ker}\left(#1\right)}
 ---
 
+{{< pagebreak >}}
+
 # Einführung
-Diese Dokumentaiton dient zur Bedienung und Weiterentlwicklung des "Robocars", welches im Rahmen des [Mobile Robotics Projekt 1](https://www.fhgr.ch/fileadmin/studium/bachelorangebot/mobile_robotics/FHGR-Bachelorstudium-Mobile_Robotics-Moduluebersicht.pdf#page=21) an der [FHGR](https://fhgr.ch) während dem 3. Semester entwickelt wurde.
+Diese Dokumentation dient zur Bedienung und Weiterentwicklung des "Robocars", das im Rahmen des [Mobile Robotics Projekt 1](https://www.fhgr.ch/fileadmin/studium/bachelorangebot/mobile_robotics/FHGR-Bachelorstudium-Mobile_Robotics-Moduluebersicht.pdf#page=21) an der [FHGR](https://fhgr.ch) während des dritten Semesters entwickelt wurde.
 
-
-::: {.callout-important title="TODO"}
-Bild des Robocars
-:::
+![Robocar](res/img/Robocar.jpeg){#fig-robocar}
 
 ::: {.callout-note title="Info"}
-Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentaiton.
-
-Dieses Dokument wurde mit [Quarto-Markdown](https://quarto.org) erstellt und ist sowol in PDF als auch in HTML verfügbar.
+- Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentation.
+- Dieses Dokument wurde mit [Quarto-Markdown](https://quarto.org) erstellt und ist sowohl in PDF (ohne Videos) als auch in HTML (bevorzugt) verfügbar.
 :::
 
-
 # Übersicht
-Das Robocar basiert auf einem stark modifiziertem Chassis von [YF-Robot](https://yfrobot.com/collections/robot-kits/products/steering-gear-robot) und verwendet einen [STM-32F446RE](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html) Mikrocontroller, welcher auf einem eigen dafür entrofenem PCB mit verschiedenen Perepherien ([M5Stack ESP32-S3](https://docs.m5stack.com/en/core/StampS3), [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/), [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html), [ToF-Sensor](), [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D)) kommuniziert.
+Das Robocar basiert auf einem stark modifiziertem Chassis von [YF-Robot](https://yfrobot.com/collections/robot-kits/products/steering-gear-robot) und verwendet einen [STM-32F446RE](https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html) Mikrocontroller, welcher auf einem eigens dafür entworfenem PCB mit verschiedenen Peripherien ([M5Stack ESP32-S3](https://docs.m5stack.com/en/core/StampS3), [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/), [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html), [ToF-Sensor](), [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D)) kommuniziert.
 
-Das Robocar soll mittels sehr günstiger Hardware in der lage sein verngesteuert zu werden und als weiterführende Ziele gewisse Assistenzfunktionen wie Kollisionsdetektion und Spurhalteasistenz verfügen. Weiter soll eine einfache Kollisionsverhinderung mittels ausweichmanöver implementiert sein.
+Das Robocar soll mittels sehr günstiger Hardware ferngesteuert werden und als weiterführende Ziele gewisse Assistenzfunktionen wie Kollisionsdetektion und Spurhalteasistenz verfügen. Weiter soll eine einfache Kollisionsverhinderung mittels Ausweichmanöver implementiert sein.
+
+
+{{< pagebreak >}}
 
 # Handbuch
 ## Benötigte Komponenten
-
 - Robocar
 - Geladene Batterien!
 - Laptop mit GUI-Applikation
 
 ::: {.callout-tip title="Tip"}
-    Sicherstellen, dass die Batterien ganz geladen sind.
+  Sicherstellen, dass die Batterien ganz geladen sind.
 :::
 
 ## Hardware
 
 1. Geladene Batterien in den Batteriehalter einsetzen.
-2. Batteriehalter in die vorgesehene Halterung einstzen.
+2. Batteriehalter in die vorgesehene Halterung einsetzen.
 3. Batteriestecker XT30 mit dem PCB verbinden.
 4. Robocar am Hauptschalter einschalten.
 
 ::: {.callout-important title="Vorsicht"}
-    Beim Einsetzen der Batteriehalterung in die Vorgesehene Halterung auf dem Robocar soll darauf geachtet werden, dass die Litzen des ToF-Spot Sensors nicht gequetscht werden!
+  <p>
+    Beim Einsetzen der Batteriehalterung in die vorgesehene Position auf dem Robocar, muss darauf geachtet werden, dass die Litzen des ToF-Spot Sensors nicht gequetscht werden!
+  </p>
+  ![Kabelquetschung](res/img/Kabelquetschung.jpeg){#fig-Quetschgefahr}
 :::
 
 ## GUI 
 Über die GUI können alle Sensordaten live abgefragt werden und alle Parameter persistent verändert werden.
 
+![GUI Robocar](res/img/Overview.jpg){#fig-gui-overview}
+
 1. GUI-Applikation starten
-2. Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (Kabelgebunden) herstellen.
+![GUI Robocar](res/img/no_devices_found.jpg)
+1. Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (kabelgebunden) herstellen.
+![GUI Robocar](res/img/select_device.jpg)
+1. Werte und Parameter abfragen
+![GUI Robocar](res/img/Viewing_data.jpg){#fig-gui-overview}
+![GUI Robocar](res/img/Changing_parameters.jpg){#fig-gui-overview}
 
 ## Spass haben
 Folgende Betriebsmodis wurden implementiert:
 
-- **Manuelles verfahren**: Das Robocar kann mittels Slider in der GUI oder dem Controller verfahren werden.
-- **Assistiertes verfahren**: Das Robocar kann mittel Slider in der GUI oder dem Controller verfahren werden unter Berücksichtigung der Spurhaltefunktion.
-- **Distanz-Modus**: Das Robocar fährt auf ein Objekt zu und haltet bei einer gewissen Distanz vor dem Objekt automatisch an.
+![Betriebsmodis](res/img/Drive_mode.jpg){#fig-Betriebsmodis}
+
+- **Manuelles Verfahren**: Das Robocar kann mittels Slider in der GUI oder dem Controller bewegt werden.
+- **Assistiertes Verfahren**: Das Robocar kann mittel Slider in der GUI oder dem Controller, unter Berücksichtigung der Spurhaltefunktion, bewegt werden.
+- **Distanz-Modus**: Das Robocar fährt auf ein Objekt zu und hält bei einer parametrisierten Distanz mit einstellbarer Tolleranz vor dem Objekt automatisch an.
 - **Kollisionsverhinderung**: Das Robocar umfährt selbstständig Hindernisse ohne Eingreifen einer Drittperson.
 
 # Hardware
 
 ![Fusion-Export](res/img/Robocar_Fusion.png){#fig-fusion-export fig-align="center" width=80%}
 
-# Elektronik
-::: {.callout-important title="TODO"}
-- Beschreibung der gesammten Elektronik
-- Beschreibung der Elektronikblöcke mit Einzelheiten zur Dimensionierung
-:::
+Für das Robocar wurden folgende Komponenten entworfen:
 
-Die Elektronik basiert auf einem eigens entworenem PCB. Auf dem PCB wird die gesammte Spannungsregelung sowie Spannungverteilung an die jewiligen Perepherien geregelt sowie die Kommunikaiton mit dem Mikrocontroller realisiert.
+- **Grundplatte** 
+  
+  Bindeglied für alle Komponenten und massgebend für die Steifigkeit des Fahrzeuges. Der Radabstand konnten im Vergleich zum Original-Chassis deutlich verringert werden.
+  {{< video res/data/Groundplate.mp4 >}}
+
+- **Batteriehalter** 
+
+  Der Batteriehalter wurde über der Vorderachse angebracht, um den Schwerpunkt nach vorne zu bringen. Die Batteriehalterung dient zudem als Halter für die Kamera.
+  {{< video res/data/Batteriehalter.mp4 >}}
+
+- **VFS mit Beleuchtungsring**
+
+  Mechanisch stellte der Visual-Flow-Senser die grösste Herausforderung dar. Es musste darauf geschaut werden, dass der Sensor ein scharfes Bild des Boden aufnimmt und zudem musste der Boden noch zusätzlich beleuchtet werden. 
+  
+  ![VFS-Beleuchtung](res/img/Vfs_light.png){fig-align="center"}
+
+- **ToF-Spot Halterung**
+  
+  Der ToF-Spot Sensor wurde so auf dem Chassis montiert, dass er möglichst nahe über den Boden hinweg schaut, um so auch niedrige Objekte zu detektieren.
+
+  ![ToF-Spot Halterung](res/img/ToF-Spot.png){#fig-tof}
+
+# Elektronik
+Die Elektronik basiert auf einem eigens entworfenen PCB. Auf dem PCB wird die gesamte Spannungsregelung sowie Spannungverteilung an die jeweiligen Peripherien geregelt sowie die Kommunikation mit dem Mikrocontroller realisiert.
 
 ::: {#fig-pcb layout-ncol=2}
-![Vorderseite](res/img/PCB_front.jpg){#fig-pcb-front}
+![Vorderseite](res/img/PCB_front.jpeg){#fig-pcb-front}
 
 ![Rückseite](res/img/PCB_back.jpg){#fig-pcb-back}
 
 PCB
 :::
 
-Das Robocar wird durch 8xAA Batterien versorgt und verfügt über eine zweistufige Spannungswandlersystem um Spannungslevels für $12\,\text{VDC}$ (Endstufe Motorensteurung), $5\,\text{VDC}$ (Perepherie) und  $3.3\,\text{VDC}$ (Microcontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung ($9\,\text{V} - 14\,\text{V}$) vom PCB getrennt werden.
+Das Robocar wird durch 8xAA Batterien versorgt und verfügt über ein zweistufiges Spannungswandlersystem, um Spannungslevels für $12\,\text{VDC}$ (Endstufe Motorensteuerung), $5\,\text{VDC}$ (Peripherie) und  $3.3\,\text{VDC}$ (Mikrocontroller) zu erzeugen. Über einen Schalter kann die Batterie und somit die Versorgungsspannung ($9\,\text{V} - 14\,\text{V}$) vom PCB getrennt werden.
 
 ## Blockschaltbild
 ![Blockschaltbild](res/img/Blockschaltbild.svg){#fig-Blockschaltbild}
 
 ## Schema & PCB-Design
 
-Das PCB verfüt über die folgenden Komponenten
+Das PCB verfügt über die folgenden Komponenten:
 
 - Spannungsversorgung
   - $12\,\text{VDC}$ Eingang mit ESD- und Polaritäts-Schutz
@@ -171,7 +202,7 @@ Das PCB verfüt über die folgenden Komponenten
   - 2 RGB Statusled für Mikrocontroller (WS2812)
   - Tag-Connect 6-Pol für ESP32
   - Tag-Connect 14-Pol für STM32
-- Perepherie
+- Peripherie
   - Lagesensor (MPU6050)
   - ToF-Kamera (MaixSense-A0101)
   - ToF-Spot (TF-LC02)
@@ -185,18 +216,18 @@ Das PCB verfüt über die folgenden Komponenten
   - 2 3-Pin Header für Servos
   - 4 GPIO Pins mit $\text{GND}$
 
-Dem Schema sind alle weiteren Details zu bezüglich Auslegung und Dimensionierung zu entnehmen.
+Dem Schema sind alle weiteren Details bezüglich Auslegung und Dimensionierung zu entnehmen.
 
 ::: {#fig-Schema layout-ncol=2}
 ![Mikrocontroller](res/img/Schematic_1.jpg){#fig-Schema-Mikrocontroller}
 
-![Perepherie](res/img/Schematic_2.jpg){#fig-Schema-Perepherie}
+![Peripherie](res/img/Schematic_2.jpg){#fig-Schema-Peripherie}
 
 Schema
 :::
 
 ::: {.callout-note title="Info"}
-Für Komponenten welche nicht der FHGR-Altium Bibliothek entnommen wurden, wurde jeweils eine eigene Bibliothek erstellt, welche unter `PCB/lib` gefunden werden kann.
+Für Komponenten, die nicht der FHGR-Altium Bibliothek entnommen werden konnte, wurde jeweils eine eigene Bibliothek erstellt. Diese ist unter `PCB/lib` zu finden.
 :::
 
 
@@ -226,13 +257,13 @@ print(f'P_out = {(P_out := U_out*I_out):.2f} W')
 print(f'n = {P_out/P_in*100:.2f} %')
 ```
 ::: {.callout-note title="Note"}
-Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwändig herausgelötet werden müssten:
+Bei der Messung wurden die folgenden Komponenten nicht entfernt, da diese aufwendig herausgelötet werden müssten:
 
-- Microcontroller STM32
+- Mikrocontroller STM32
 - Kommunikationscontroller ESP32
 - IMU MPU6050
 
-Aus diesem Grund fliesst immer ein gewisser Strom, welcher bei der Abgangsseite nicht erfasst werden kann durch diese Komponenten, was eine genaue Messung verunmöglicht und den tiefen Wirkungsgrad ausmacht.
+Aus diesem Grund fliesst immer ein gewisser Strom, der bei der Abgangsseite nicht erfasst werden kann. Dies führt zu einem Querstrom, welcher nicht erfasst werden kann und eine genaue Messung verunmöglicht sowie den tiefen Wirkungsgrad ausmacht.
 :::
 
 ### Spannungsrippel
@@ -248,23 +279,23 @@ Spannungsrippel
 Der Spannungsrippel beträgt ca. $\Delta U_5 \approx 150\,\text{mVDC}$, was $3\,\%$ von $5\,\text{VDC}$ entspricht.
 
 ::: {.callout-note title="Note"}
-Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt so sind um einiges bessere Werte zu erwarten.
+Ein Grossteil der Spannungsrippel macht hierbei das ESP32 aus. Wird dieses ausgelötet und die Messung wiederholt, so sind um einiges bessere Werte zu erwarten.
 :::
 
 
 # Software
 ## Softwareaufbau
-Das Robocar wurde aufgrund der erhöten übersichtlichkeit und Abkapselung der einzelnen Module mit [C++](https://www.wikiwand.com/de/C%2B%2B) programmiert. Dabei wurde für jede Komponente ein eigens Modul entwickelt und implementiert.
+Das Robocar wurde aufgrund der erhöten Übersichtlichkeit und Abkapselung der einzelnen Module mit [C++](https://www.wikiwand.com/de/C%2B%2B) programmiert. Dafür wurde für jede Komponente ein eigenes Modul entwickelt und implementiert.
 
 | Komponente | Modulname | Softwaremodul |
-|:------|:------|:------|
-| [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | MPU60X0 | [Github]() |
-| [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html) | A010 | [Github]() |
-| [ToF-Sensor]() | TFLC02 | [Github]() |
-| [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D) | ADNS3080 | [Github]() |
-| [Neopixel]() | WS2812/SK6812 | [Github]() |
-| [Servo]() | MG90| [Github]() |
-| [H-Brücke]() | TB6612FNG | [Github]() |
+|:------|:------|:------:|
+| [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | MPU60X0 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
+| [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html) | A010 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/A010) |
+| ToF-Sensor | TFLC02 | [Github](https://github.com/lssch/TFLC02) |
+| [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D) | ADNS3080 | [Github](https://github.com/lssch/ADNS3080) |
+| [Neopixel](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels) | WS2812/SK6812 | [Github](https://github.com/lssch/NeoPixel) |
+| Servo | MG90| [Github](https://github.com/lssch/Servo) |
+| [H-Brücke](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG) | TB6612FNG | [Github](https://github.com/lssch/TB6612FNG) |
 
 
 ## Flussdiagramm
@@ -319,29 +350,93 @@ stateDiagram
 ```
 
 ## Funktionalität
+Die Hauptschwierigkeit bei der Implementierung ist die Synchronisation der [Datenstrukturen](https://github.com/lssch/types) zwischen den beiden Mikrocontrollern. So müssen Überschreibungen vermieden werden und requests/acknowlidges passend gesetzt und gelöscht werden. Zwischen dem ESP32 und dem STM32 wurde eine SPI-Kommunikation eingerichtet und das ESP32 kommuniziert mit dem Laptop über UART. Über ein [eigenes Protokoll](https://github.com/lssch/comms) zwischen STM32 und ESP32 wird in jedem Zyklus, welcher durch das ESP32 initiiert wird die Variablen zwischen den Mikrocontrollern synchronisiert. Dabei wird von simultan aus/in den DMA Speicher auf beiden Mikrocontrollern geschrieben.
+```{mermaid}
+sequenceDiagram
+    participant STM32
+    participant ESP32
+    participant Laptop
+
+    Note over ESP32,STM32: SPI fullduplex
+
+    loop Sync
+      ESP32 -> STM32: package TX/RX
+    end
+
+    loop Sample
+      ESP32 ->> Laptop: EUI read package
+    end
+
+    Laptop ->> ESP32: EUI write package
+
+    Note over ESP32,Laptop: UART
+```
+
+::: {.callout-note title="Note"}
+Bei einer Hardware-Revision würde es Sinn machen die SPI-Kommunikaiton durch eine UART-Kommunikation zu ersetzen und das ESP32 nur als UART-Bridge einzusetzen.
+:::
+
+Der Rest der Software ist trivial und [selbsterklärend](https://www.wikiwand.com/en/Self-documenting_code).
+
+::: {.callout-tip title="Tip"}
+
+![Useless comment](res/img/good_code.jpeg){#fig-good-code}
+
+- A comment is a failure to express yourself in code. If you fail, then write a comment; but try not to fail. [Robert Martin](https://twitter.com/unclebobmartin/status/870311898545258497)
+- The comments will inevitably become out of date, and untrustworthy comments are worse than no comments at all. [The Pragmatic Programmer](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer)
+- [Make your code explain itself. If it has too many comments, you’re doing it wrong!](https://medium.com/@douglas.iacovelli/make-your-code-explain-itself-if-it-has-too-many-comments-youre-doing-it-wrong-c856a0df6a65)
+
+
+:::
 
 ## Modulbeschreibungen
-Die einzelnen Modulbeschreibungen können den jewiligen `.hpp` Source-Dokumenten als [Doxygen](https://www.doxygen.nl) entnommen werden und werden hier nicht explizit aufgeführt.
+Die einzelnen Modulbeschreibungen können den jewiligen `.hpp` Source-Dokumenten als [Doxygen](https://www.doxygen.nl) entnommen werden und werden hier nicht explizit aufgeführt!
 
 ## ToDo-Software
+ToDo's für eizenlne Module den einzelnen Doxygen-Kommentaren zu entnehmen und werden hier nicht explizit gelistet. 
+
+- Generell muss ein [Refactoring](https://www.wikiwand.com/de/Refactoring) getätigt werden.
+- Implementierung eines [Watchdog](https://www.wikiwand.com/de/Watchdog).
+- Implementierung des Kollisionsverhinderungs-Modus
+- Umschalten auf die Odometry-Daten des IMU wenn die Bodequalität des VFS zu schlecht wird.
+- "Richtige" Implementation eines PI-Speedcontrollers -> Jetztiger oszilliert praktisch ungedämpft.
 
 # Stand der Dinge
 
-## Vernsteuerung
-Das Robocar ist zur Zeit nicht in der Lage Drahtlos verngestuerert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von [Electricui](https://electricui.com/) puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember sichergestellt sein.)
+## Fernsteuerung
+Das Robocar ist zur Zeit nicht in der Lage drahtlos ferngesteuert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von [Electricui](https://electricui.com/) puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember 2023 sichergestellt sein.)
+
+## Implementation X-Box-Kontroller
+Das Robocar ist zur Zeit nicht in der Lage über einen X-Box-Kontroller ferngestuert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von [Electricui](https://electricui.com/) puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember 2023 sichergestellt sein.)
 
 ## Kommunkation zwischen den Mikrocontrollern
 Die Kommunikaiton zwischen den Mikrocontrollern ist hochgradig ineffizient und könnte um einiges datensparender implementiert werden. Dadurch würden sich auch die Zugriffszeiten von der GUI zum ESP32 verringern, was eine höhere Aktualisierungsrate ermöglicht.
 
-Zur Zeit werden immer alle Bytes der gesammten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10'000 Bytes betragen kann.
+Zur Zeit werden immer alle Bytes der gesamten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10'000 Bytes betragen kann.
+
+## ToF-Kamera
+Leider gelang es nicht, die Pixeldaten der Kamera auf den STM32 zu übertragen. Die UART-Schnittstelle scheint auf zwei verschiedenen Kameras immer deaktiviert zu sein. Auch wenn diese über das Konfigurationstool aktiviert wird. Aus diesem Grund wurde der Kollisionsverhinderungs-Modus auch nicht implementiert. 
 
 ## Visualisierung
-Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.
+Die Visualisierung wurde nicht kompiliert, um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Plattformen (Windows, MacOS, Linux) gemacht werden.
+
+## Parameterhandler
+Zur Zeit können keine Parameter persisteng gespeichert werden. Bei einem Neustart gehen alle Werte verlohren. Für den STM32F401RE funktioniert der Code und ein Registermap des Flash-Speichers ist im Web zu finden. Für den STM32F446RE ist keine Dokumentation über Den Flashaufbau zu finden und die Pages und Addressen stimmen nicht mit denen des STM32F401RE überein.
 
 # Bekannte Probleme
 ## Reset des Robocars
-Wird über den Reset-Button ein Reset-Event ausgelösst, so kann es sein, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten anzahl an Pingversuchen automatisch den Error-Handler aufruft.
+Wird über den Reset-Button ein Reset-Event ausgelöst, so ist es möglich, dass das IMU über den I2C Bus nicht gefunden wird und die Software nach einer parametrisierten Anzahl an Pingversuchen automatisch den Error-Handler aufruft.
 
 ```cpp
   if (imu.init(3) != SUCCESS) Error_Handler();
 ```
+
+## Verbindungsprobleme mit GUI
+Zum Teil wird das Robocar von der GUI nicht erkannt und kann somit nicht ferngesteurt werden. In diesem Fall muss nach folgendem Ablauf vorgegangen werden:
+
+1. Robocar vom Laptop trennen
+2. Robocar ausschalten
+3. GUI "refresh" drücken
+4. Robocar erneut mit dem Laptop verbinden
+5. Wird das Robocar erkannt, so muss auf dem Robocar der Reset-Button gedrückt werden
+6. GUI "connect" drücken
