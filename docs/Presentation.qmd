@@ -61,10 +61,10 @@ format:
 ::: {.panel-tabset group="language"}
 
 ## Vorderseite
-![Vorderseite](res/img/PCB_front.jpeg){#fig-pcb-front width=75%}
+![Vorderseite](res/img/PCB_front.png){#fig-pcb-front width=75%}
 
 ## Rückseite
-![Rückseite](res/img/PCB_back.jpg){#fig-pcb-back width=75%}
+![Rückseite](res/img/PCB_back.png){#fig-pcb-back width=75%}
 
 :::
 :::
