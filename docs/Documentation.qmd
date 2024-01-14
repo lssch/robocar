@@ -80,6 +80,8 @@ Diese Dokumentation dient zur Bedienung und Weiterentwicklung des "Robocars", da
 
 ![Robocar](res/img/Robocar.jpeg){#fig-robocar}
 
+Sämtliche Files sind in folgemdem [GitHub-Repo](https://github.com/lssch/robocar) zu finden.
+
 ::: {.callout-note title="Info"}
 - Diese Dokumentation soll als Zusatz dienen und nicht als Ersatz für die Sourcecode Dokumentation.
 - Dieses Dokument wurde mit [Quarto-Markdown](https://quarto.org) erstellt und ist sowohl in PDF (ohne Videos) als auch in HTML (bevorzugt) verfügbar.
@@ -120,20 +122,26 @@ Das Robocar soll mittels sehr günstiger Hardware ferngesteuert werden und als w
 ## GUI 
 Über die GUI können alle Sensordaten live abgefragt werden und alle Parameter persistent verändert werden.
 
-![GUI Robocar](res/img/Overview.jpg){#fig-gui-overview}
+![GUI Robocar](res/img/Overview.png){#fig-gui-overview}
 
 1. GUI-Applikation starten
-![GUI Robocar](res/img/no_devices_found.jpg)
+
+  ![GUI Robocar keine Geräte](res/img/no_devices_found.png){#fig-gui1}
+
 1. Verbindung mit dem Robocar über WIFI/Bluetooth oder Serial (kabelgebunden) herstellen.
-![GUI Robocar](res/img/select_device.jpg)
+
+  ![GUI Robocar verbinden mit Endgerät](res/img/select_device.png){#fig-gui2}
+
 1. Werte und Parameter abfragen
-![GUI Robocar](res/img/Viewing_data.jpg){#fig-gui-overview}
-![GUI Robocar](res/img/Changing_parameters.jpg){#fig-gui-overview}
+
+  ![GUI Robocar Datenseite](res/img/Viewing_data.png){#fig-gui3}
+
+  ![GUI Robocar Parameterseite](res/img/Changing_parameters.png){#fig-gui3}
 
 ## Spass haben
 Folgende Betriebsmodis wurden implementiert:
 
-![Betriebsmodis](res/img/Drive_mode.jpg){#fig-Betriebsmodis}
+![Betriebsmodis](res/img/Drive_mode.png){#fig-Betriebsmodis}
 
 - **Manuelles Verfahren**: Das Robocar kann mittels Slider in der GUI oder dem Controller bewegt werden.
 - **Assistiertes Verfahren**: Das Robocar kann mittel Slider in der GUI oder dem Controller, unter Berücksichtigung der Spurhaltefunktion, bewegt werden.
@@ -141,8 +149,9 @@ Folgende Betriebsmodis wurden implementiert:
 - **Kollisionsverhinderung**: Das Robocar umfährt selbstständig Hindernisse ohne Eingreifen einer Drittperson.
 
 # Hardware
+Im CAD wurde das gesammte Auto nachgezeichnet und anschliessend so abgeändert.
 
-![Fusion-Export](res/img/Robocar_Fusion.png){#fig-fusion-export fig-align="center" width=80%}
+![Fusion-Export](res/img/Robocar_Fusion.png){#fig-fusion-export fig-align="center"}
 
 Für das Robocar wurden folgende Komponenten entworfen:
 
@@ -160,7 +169,7 @@ Für das Robocar wurden folgende Komponenten entworfen:
 
   Mechanisch stellte der Visual-Flow-Senser die grösste Herausforderung dar. Es musste darauf geschaut werden, dass der Sensor ein scharfes Bild des Boden aufnimmt und zudem musste der Boden noch zusätzlich beleuchtet werden. 
   
-  ![VFS-Beleuchtung](res/img/Vfs_light.png){fig-align="center"}
+  ![VFS-Beleuchtung](res/img/Vfs_light.png){#fig-vfs-light fig-align="center"}
 
 - **ToF-Spot Halterung**
   
@@ -172,9 +181,9 @@ Für das Robocar wurden folgende Komponenten entworfen:
 Die Elektronik basiert auf einem eigens entworfenen PCB. Auf dem PCB wird die gesamte Spannungsregelung sowie Spannungverteilung an die jeweiligen Peripherien geregelt sowie die Kommunikation mit dem Mikrocontroller realisiert.
 
 ::: {#fig-pcb layout-ncol=2}
-![Vorderseite](res/img/PCB_front.jpeg){#fig-pcb-front}
+![Vorderseite](res/img/PCB_front.png){#fig-pcb-front width="98%"}
 
-![Rückseite](res/img/PCB_back.jpg){#fig-pcb-back}
+![Rückseite](res/img/PCB_back.png){#fig-pcb-back}
 
 PCB
 :::

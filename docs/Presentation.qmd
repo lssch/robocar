@@ -18,80 +18,166 @@ format:
     progress: false
     history: true
     chalkboard: true
+    preview-links: auto
 ---
 
-:::{.callout-note title=todo}
-- Code stats
-- Defekte Komponenten Stats
-- 
-:::
-
 # Übersicht
- 
-
-# Hardware
-
-![Fusion-Export](res/img/Robocar_Fusion.png){#fig-fusion-export fig-align="center" width=80%}
-
-# Elektronik
-::: {#fig-pcb layout-ncol=2}
-![Vorderseite](res/img/PCB_front.jpg){#fig-pcb-front}
-
-![Rückseite](res/img/PCB_back.jpg){#fig-pcb-back}
-
-PCB
-:::
-
-# Software
-![Comments](res/img/good_code.webp){#fig-comment}
-
-## Softwareaufbau
-- Objektorientiert in C++
-- 3 Verschiedene Oberflächen
-
-| Komponente | Typ | Softwaremodul |
-|:------|:------|:------:|
-| [STM32](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | Firmware | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
-| [ESP32](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | Firmware | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
-| [Robocar visualisation](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | GUI | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
-
-- Eigene Softwaremodule für jede Hardwarekomponente
-
-| Komponente | Modulname | Softwaremodul |
-|:------|:------|:------:|
-| [IMU](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | MPU60X0 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0) |
-| [ToF-Kamera](https://wiki.sipeed.com/hardware/en/maixsense/index.html) | A010 | [Github](https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/A010) |
-| ToF-Sensor | TFLC02 | [Github](https://github.com/lssch/TFLC02) |
-| [Visual-Flow-Kamera](https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D) | ADNS3080 | [Github](https://github.com/lssch/ADNS3080) |
-| [Neopixel](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels) | WS2812/SK6812 | [Github](https://github.com/lssch/NeoPixel) |
-| Servo | MG90| [Github](https://github.com/lssch/Servo) |
-| [H-Brücke](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG) | TB6612FNG | [Github](https://github.com/lssch/TB6612FNG) |
-
-- GUI in [Typescript](https://www.typescriptlang.org/)
-
-# Stats {auto-animate=true auto-animate-easing="ease-in-out"}
-```{mermaid}
-pie title Anzal geschriebene Codezeilen
-    "STM32 ca. 2'500" : 2500
-    "ESP32 ca. 900" : 900
-    "GUI ca. 3'300" : 3300
-```
-
-## {auto-animate=true auto-animate-easing="ease-in-out"}
 :::: {.columns}
 
 ::: {.column}
+![Sketch](res/img/Sketch.jpg){#fig-Sketch}
+:::
+::: {.column}
+::: {.incremental}
+- Ferngesteuertes RC-Auto
+- Teil-/Vollautonom 
+:::
+:::
 
+::::
+
+# Mechanik
+:::: {.columns}
+
+::: {.column}
+![Fusion-Export](res/img/Fusion.png){#fig-fusion-export}
+:::
+
+::: {.column}
+::: {.incremental}
+- Neue Grundplatte
+- Batteriehalter
+- ToF-Kamerahalter
+- ToF-Spot-Halter
+- Beleuchtungsring VFS
+:::
+:::
+::::
+
+# Elektronik
+:::: {.columns}
+
+::: {.column}
+::: {.panel-tabset group="language"}
+
+## Vorderseite
+![Vorderseite](res/img/PCB_front.jpeg){#fig-pcb-front width=75%}
+
+## Rückseite
+![Rückseite](res/img/PCB_back.jpg){#fig-pcb-back width=75%}
+
+:::
+:::
+
+::: {.column}
+::: {.incremental}
+- Platzsparend
+- Keine Steckmodule
+:::
+
+::: {.fragment}
+**Fehler**
+
+- RX/TX für debugging vertauscht
+:::
+
+::: {.fragment}
+**Siliziumhimmel**
+
+- 1 Mikrocontroller
+- 4 H-Brücken
+:::
+
+:::
+
+::::
+
+
+
+# Software
+![Comments](res/img/good_code.jpeg){#fig-comment}
+
+## Softwareaufbau
+::: {.incremental}
+- 3 Verschiedene Oberflächen
+  - **Firmware**: STM32 in C++
+  - **Firmware**: ESP32 in C++
+  - **GUI**: Robocar Visualisierung in [Typescript](https://www.typescriptlang.org/)
+- Eigene Softwaremodule für jede Hardwarekomponente
+  
+  :::: {.columns}
+  ::: {.column}
+    - IMU
+    - ToF-Kamera
+    - Visual-Flow-Sensor
+  :::
+  ::: {.column}
+    - Neopixel
+    - Servo
+    - H-Brücke
+  :::
+  ::::
+:::
+
+
+## Kommunikation mit GUI
 ```{mermaid}
-pie title Anzal geschriebene Codezeilen
+sequenceDiagram
+    participant STM32
+    participant ESP32
+    participant Laptop
+
+    Note over ESP32,STM32: SPI fullduplex
+
+    loop Sync
+      ESP32 -> STM32: package TX/RX
+    end
+
+    loop Sample
+      ESP32 ->> Laptop: EUI read package
+    end
+
+    Laptop ->> ESP32: EUI write package
+
+    Note over ESP32,Laptop: UART
+```
+
+## Regelung
+$$x_{\text{a}}(t) = K_{\text{p}} \cdot x_{\text{e}}(t) + K_{\text{i}} \cdot \int x_{\text{e}}(t) \, \mathrm{d} t + K_{\text{d}} \cdot \dot x_{\text{e}}(t) $$
+
+::: {.fragment}
+:::: {.columns}
+::: {.column}
+![Sprungantwort](res/img/pid.webp){#fig-sprungantwort}
+:::
+
+::: {.column}
+::: {.incremental}
+- Geschwindigkeit
+- Abstand zu Objekt
+- Tuning von $K_{\text{p}}, K_{\text{i}}, K_{\text{d}}$
+:::
+:::
+:::
+::::
+
+## Falsches Tuning
+
+{{< video res/data/PID.mov >}}
+
+## Codestats {auto-animate=true}
+```{mermaid}
+%%{init: {"pie": {"textPosition": 0.5}} }%%
+   pie
+    title Eigene Codezeilen
     "STM32 ca. 2'500" : 2500
     "ESP32 ca. 900" : 900
     "GUI ca. 3'300" : 3300
 ```
-:::
 
-::: {.column}
+## Codestats {auto-animate=true}
 ```{mermaid}
+%%{init: {"pie": {"textPosition": 0.5}} }%%
 pie title Anzahl Codezeilen
     "Eigene STM32 ca. 2'500" : 2500
     "Eigene ESP32 ca. 900" : 900
@@ -100,20 +186,7 @@ pie title Anzahl Codezeilen
     "ESP32 ca. 16'100" : 16100
     "GUI ca. 236'700" : 236700
 ```
-:::
 
-::::
+# Demonstration
 
-
-
-
-## Vernsteuerung
-Das Robocar ist zur Zeit nicht in der Lage Drahtlos verngestuerert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von [Electricui](https://electricui.com/) puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember sichergestellt sein.)
-
-## Kommunkation zwischen den Mikrocontrollern
-Die Kommunikaiton zwischen den Mikrocontrollern ist hochgradig ineffizient und könnte um einiges datensparender implementiert werden. Dadurch würden sich auch die Zugriffszeiten von der GUI zum ESP32 verringern, was eine höhere Aktualisierungsrate ermöglicht.
-
-Zur Zeit werden immer alle Bytes der gesammten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10'000 Bytes betragen kann.
-
-## Visualisierung
-Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.
+# Fragen

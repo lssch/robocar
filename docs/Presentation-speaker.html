@@ -7,11 +7,13 @@
 <link href="Presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="Presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="Presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="Presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Presentation_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="Presentation_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.514">
 
   <meta name="author" content="Lars Schwarz">
-  <meta name="dcterms.date" content="2024-01-13">
+  <meta name="dcterms.date" content="2024-01-14">
   <title>Robocar</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -344,78 +346,115 @@ Lars Schwarz
 </div>
 </div>
 
-  <p class="date">2024-01-13</p>
+  <p class="date">2024-01-14</p>
 </section>
-<section class="slide level2">
-
-<div title="todo">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="übersicht" class="title-slide slide level1 center">
+<h1>Übersicht</h1>
+<div class="columns">
+<div class="column">
+<div id="fig-Sketch" class="quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-Sketch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="res/img/Sketch.jpg">
 </div>
-<p><strong>todo</strong></p>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-Sketch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Sketch
+</figcaption>
+</figure>
 </div>
-<div class="callout-content">
+</div><div class="column">
+<div>
 <ul>
-<li>Code stats</li>
-<li>Defekte Komponenten Stats</li>
-<li></li>
+<li class="fragment">Ferngesteuertes RC-Auto</li>
+<li class="fragment">Teil-/Vollautonom</li>
 </ul>
 </div>
 </div>
 </div>
+</section>
+
+<section id="mechanik" class="title-slide slide level1 center">
+<h1>Mechanik</h1>
+<div class="columns">
+<div class="column">
+<div id="fig-fusion-export" class="quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="res/img/Fusion.png">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-fusion-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Fusion-Export
+</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">Neue Grundplatte</li>
+<li class="fragment">Batteriehalter</li>
+<li class="fragment">ToF-Kamerahalter</li>
+<li class="fragment">ToF-Spot-Halter</li>
+<li class="fragment">Beleuchtungsring VFS</li>
+</ul>
+</div>
+</div>
 </div>
 </section>
-<section id="übersicht" class="title-slide slide level1 center">
-<h1>Übersicht</h1>
-
-</section>
-
-<section id="hardware" class="title-slide slide level1 center">
-<h1>Hardware</h1>
-
-<img data-src="res/img/Robocar_Fusion.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p class="caption">
-Abbildung&nbsp;1: Fusion-Export
-</p></section>
 
 <section id="elektronik" class="title-slide slide level1 center">
 <h1>Elektronik</h1>
-<div id="fig-pcb" class="quarto-layout-panel">
+<div class="columns">
+<div class="column">
+<div class="panel-tabset" data-group="language">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Vorderseite</a></li><li><a href="#tabset-1-2">Rückseite</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1">
+<div id="fig-pcb-front" class="quarto-figure quarto-figure-center" width="75%">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pcb" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-pcb-front" class="quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-subfloat-fig">
 <div aria-describedby="fig-pcb-front-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="res/img/PCB_front.jpg" data-ref-parent="fig-pcb">
+<img data-src="res/img/PCB_front.jpeg" style="width:75.0%">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-pcb-front-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Vorderseite
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-pcb-front-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Vorderseite
 </figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pcb" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-pcb-back" class="quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-subfloat-fig">
+<div id="tabset-1-2">
+<div id="fig-pcb-back" class="quarto-figure quarto-figure-center" width="75%">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pcb-back-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="res/img/PCB_back.jpg" data-ref-parent="fig-pcb">
+<img data-src="res/img/PCB_back.jpg" style="width:75.0%">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-pcb-back-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Rückseite
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-pcb-back-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Rückseite
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-pcb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: PCB
-</figcaption>
-</figure>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">Platzsparend</li>
+<li class="fragment">Keine Steckmodule</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Fehler</strong></p>
+<ul>
+<li>RX/TX für debugging vertauscht</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Siliziumhimmel</strong></p>
+<ul>
+<li>1 Mikrocontroller</li>
+<li>4 H-Brücken</li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 
@@ -423,102 +462,109 @@ Abbildung&nbsp;2: PCB
 <section id="software" class="title-slide slide level1 center">
 <h1>Software</h1>
 
-<img data-src="res/img/good_code.webp" class="r-stretch quarto-figure-center"><p class="caption">
-Abbildung&nbsp;3: Comments
+<img data-src="res/img/good_code.jpeg" class="r-stretch quarto-figure-center"><p class="caption">
+Abbildung&nbsp;5: Comments
 </p></section>
 <section id="softwareaufbau" class="slide level2">
 <h2>Softwareaufbau</h2>
+<div>
 <ul>
-<li>Objektorientiert in C++</li>
-<li>3 Verschiedene Oberflächen</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Komponente</th>
-<th style="text-align: left;">Typ</th>
-<th style="text-align: center;">Softwaremodul</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">STM32</a></td>
-<td style="text-align: left;">Firmware</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0">Github</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">ESP32</a></td>
-<td style="text-align: left;">Firmware</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0">Github</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">Robocar visualisation</a></td>
-<td style="text-align: left;">GUI</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0">Github</a></td>
-</tr>
-</tbody>
-</table>
+<li class="fragment"><p>3 Verschiedene Oberflächen</p>
 <ul>
-<li>Eigene Softwaremodule für jede Hardwarekomponente</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Komponente</th>
-<th style="text-align: left;">Modulname</th>
-<th style="text-align: center;">Softwaremodul</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">IMU</a></td>
-<td style="text-align: left;">MPU60X0</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/mpu60X0">Github</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://wiki.sipeed.com/hardware/en/maixsense/index.html">ToF-Kamera</a></td>
-<td style="text-align: left;">A010</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/STM32_Robocar_FW/tree/main/Core/Inc/A010">Github</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ToF-Sensor</td>
-<td style="text-align: left;">TFLC02</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/TFLC02">Github</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.mouser.ch/ProductDetail/Broadcom-Avago/ADNS-3080?qs=RuhU64sK2%252Bsop/60ZpFX6g%3D%3D">Visual-Flow-Kamera</a></td>
-<td style="text-align: left;">ADNS3080</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/ADNS3080">Github</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels">Neopixel</a></td>
-<td style="text-align: left;">WS2812/SK6812</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/NeoPixel">Github</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Servo</td>
-<td style="text-align: left;">MG90</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/Servo">Github</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&amp;prodName=TB6612FNG">H-Brücke</a></td>
-<td style="text-align: left;">TB6612FNG</td>
-<td style="text-align: center;"><a href="https://github.com/lssch/TB6612FNG">Github</a></td>
-</tr>
-</tbody>
-</table>
+<li class="fragment"><strong>Firmware</strong>: STM32 in C++</li>
+<li class="fragment"><strong>Firmware</strong>: ESP32 in C++</li>
+<li class="fragment"><strong>GUI</strong>: Robocar Visualisierung in <a href="https://www.typescriptlang.org/">Typescript</a></li>
+</ul></li>
+<li class="fragment"><p>Eigene Softwaremodule für jede Hardwarekomponente</p>
+<div class="columns">
+<div class="column">
 <ul>
-<li>GUI in <a href="https://www.typescriptlang.org/">Typescript</a></li>
+<li class="fragment">IMU</li>
+<li class="fragment">ToF-Kamera</li>
+<li class="fragment">Visual-Flow-Sensor</li>
 </ul>
-</section></section>
-<section>
-<section id="stats" class="title-slide slide level1 center" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h1 data-id="quarto-animate-title">Stats</h1>
+</div><div class="column">
+<ul>
+<li class="fragment">Neopixel</li>
+<li class="fragment">Servo</li>
+<li class="fragment">H-Brücke</li>
+</ul>
+</div>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="kommunikation-mit-gui" class="slide level2">
+<h2>Kommunikation mit GUI</h2>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">pie title Anzal geschriebene Codezeilen
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant STM32
+    participant ESP32
+    participant Laptop
+
+    Note over ESP32,STM32: SPI fullduplex
+
+    loop Sync
+      ESP32 -&gt; STM32: package TX/RX
+    end
+
+    loop Sample
+      ESP32 -&gt;&gt; Laptop: EUI read package
+    end
+
+    Laptop -&gt;&gt; ESP32: EUI write package
+
+    Note over ESP32,Laptop: UART
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="regelung" class="slide level2">
+<h2>Regelung</h2>
+<p><span class="math display">\[x_{\text{a}}(t) = K_{\text{p}} \cdot x_{\text{e}}(t) + K_{\text{i}} \cdot \int x_{\text{e}}(t) \, \mathrm{d} t + K_{\text{d}} \cdot \dot x_{\text{e}}(t) \]</span></p>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<div id="fig-sprungantwort" class="quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-sprungantwort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="res/img/pid.webp">
+</div>
+<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-sprungantwort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Sprungantwort
+</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">Geschwindigkeit</li>
+<li class="fragment">Abstand zu Objekt</li>
+<li class="fragment">Tuning von <span class="math inline">\(K_{\text{p}}, K_{\text{i}}, K_{\text{d}}\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="falsches-tuning" class="slide level2">
+<h2>Falsches Tuning</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="res/data/PID.mov"></video>
+</section>
+<section id="codestats" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Codestats</h2>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"pie": {"textPosition": 0.5}} }%%
+   pie
+    title Eigene Codezeilen
     "STM32 ca. 2'500" : 2500
     "ESP32 ca. 900" : 900
     "GUI ca. 3'300" : 3300
@@ -528,29 +574,14 @@ Abbildung&nbsp;3: Comments
 </div>
 </div>
 </section>
-<section id="section" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
-<h2 data-id="quarto-animate-title"></h2>
-<div class="columns">
-<div class="column">
+<section id="codestats-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Codestats</h2>
 <div class="cell" data-reveal="true">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">pie title Anzal geschriebene Codezeilen
-    "STM32 ca. 2'500" : 2500
-    "ESP32 ca. 900" : 900
-    "GUI ca. 3'300" : 3300
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column">
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">pie title Anzahl Codezeilen
+<pre class="mermaid mermaid-js">%%{init: {"pie": {"textPosition": 0.5}} }%%
+pie title Anzahl Codezeilen
     "Eigene STM32 ca. 2'500" : 2500
     "Eigene ESP32 ca. 900" : 900
     "Eigene GUI ca. 3'300" : 3300
@@ -562,25 +593,18 @@ Abbildung&nbsp;3: Comments
 </div>
 </div>
 </div>
-</div>
-</div>
+</section></section>
+<section id="demonstration" class="title-slide slide level1 center">
+<h1>Demonstration</h1>
+
 </section>
-<section id="vernsteuerung" class="slide level2">
-<h2>Vernsteuerung</h2>
-<p>Das Robocar ist zur Zeit nicht in der Lage Drahtlos verngestuerert zu werden. Dies kann jedoch mit geringem Aufwand implementiert werden, sobald das nächste Update von <a href="https://electricui.com/">Electricui</a> puliziert wird. (Anfangs des Projektes wurde bei den Entwicklern nachgefragt und ein Release sollte bis Ende Dezember sichergestellt sein.)</p>
-</section>
-<section id="kommunkation-zwischen-den-mikrocontrollern" class="slide level2">
-<h2>Kommunkation zwischen den Mikrocontrollern</h2>
-<p>Die Kommunikaiton zwischen den Mikrocontrollern ist hochgradig ineffizient und könnte um einiges datensparender implementiert werden. Dadurch würden sich auch die Zugriffszeiten von der GUI zum ESP32 verringern, was eine höhere Aktualisierungsrate ermöglicht.</p>
-<p>Zur Zeit werden immer alle Bytes der gesammten Datenstruktur übertragen, auch wenn nur ein Teil der Datenstruktur angefragt wurde. Ein Grossteil davon macht das Kamerabild der ToF-Kamera aus, was bis zu 10’000 Bytes betragen kann.</p>
-</section>
-<section id="visualisierung" class="slide level2">
-<h2>Visualisierung</h2>
-<p>Die Visualisierung wurde nicht kompiliert um ohne Entwicklungsumgebung zu funktioniern. Dies kann jedoch nachträglich für alle gänigen Platformen gemacht werden.</p>
+
+<section id="fragen" class="title-slide slide level1 center">
+<h1>Fragen</h1>
 <div class="footer footer-default">
 
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -609,7 +633,7 @@ Abbildung&nbsp;3: Comments
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -950,6 +974,7 @@ Abbildung&nbsp;3: Comments
       }
     });
     </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
     
 
 </body></html>
